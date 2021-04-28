@@ -12,6 +12,7 @@ function filmeDetalhes() {
     let divDetalhes = document.createElement('div');
     divDetalhes.setAttribute('class', 'detalhes');
     divDetalhes.appendChild(filmeDescricao());
+    container.appendChild(divDetalhes);
 }
 
 function filmeCapa() {
@@ -29,7 +30,7 @@ function filmeTitulo() {
 function filmeDescricao() {
     let divDescricao = document.createElement('div');
     divDescricao.setAttribute('class', 'descricao');
-    return container.appendChild(divDescricao);
+    return divDescricao;
 }
 
 function filmeEmbed() {
