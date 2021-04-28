@@ -1,0 +1,25 @@
+.button-arrow-left {
+  border: 0px;
+  background-color: transparent;
+  color: var(--color-second);
+  width: 24px;
+  height: 48px;
+  cursor: pointer;
+}
+
+.button-arrow-left::before {
+  content: "<";
+}
+
+.button-arrow-right {
+  border: 0px;
+  background-color: transparent;
+  color: var(--color-second);
+  width: 24px;
+  height: 48px;
+  cursor: pointer;
+}
+
+.button-arrow-right::after {
+  content: ">";
+}
