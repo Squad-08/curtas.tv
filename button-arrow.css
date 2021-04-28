@@ -8,7 +8,11 @@
 }
 
 .button-arrow-left::before {
-  content: "<";
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  border: 48px solid transparent;
+  border-right: 24px solid var(--color-second);
 }
 
 .button-arrow-right {
@@ -21,5 +25,9 @@
 }
 
 .button-arrow-right::after {
-  content: ">";
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  border: 48px solid transparent;
+  border-left: 24px solid var(--color-second);
 }
