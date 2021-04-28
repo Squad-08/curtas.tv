@@ -7,10 +7,8 @@ Todas curtas você enconra aqui.
 # Clone este repositório
 $ git clone https://github.com/Squad-08/curtas.tv.git
 
-# Acesse a pasta do projeto no terminal/cmd
+# Acesse a pasta do projeto
 $ clique duplo no index.html
-
-# O servidor inciará na porta:8080 - acesse http://localhost:8080 
 
 # Instale as dependências
 $ npm install
@@ -33,14 +31,17 @@ Este projeto é divido em duas partes:
 ### Pré-requisitos
 
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
-[Git](https://git-scm.com) e [Node.js](https://nodejs.org/en/).
-Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
+[Git](https://git-scm.com);
+[VSCode](https://code.visualstudio.com/).
 
 #### 🎲 Rodando o servidor (Backend)
 
 ```bash
-# Execute a aplicação
-$ ?
+# Instale as dependências
+$ npm install
+
+# Execute a API
+$ npm start
 
 # O servidor inciará na porta:8080 - acesse http://localhost:8080 
 
@@ -48,8 +49,8 @@ $ ?
 #### 🎲 Rodando a aplicação web (Frontend)
 
 ```bash
-#Rodar o projeto
-$ ?
+# Acesse a pasta do projeto
+$ clique duplo no index.html
 
 ```
 
