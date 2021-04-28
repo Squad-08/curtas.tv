@@ -70,6 +70,6 @@ $ ?
 
 ## ✒️ Autores
 
-* **SQUAD-08** - [ivitech]( https://github.com/orgs/Squad-08/projects/1)
+* **SQUAD-08** - [squad-08]( https://github.com/orgs/Squad-08/projects/1)
 
 ## 📌 Versão 1.0.0
