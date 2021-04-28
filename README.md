@@ -1,4 +1,4 @@
-# Curtas.com
+# Curtas.tv
 Todas curtas você enconra aqui.
 
 #### 🧭 Baixando e rodando o projeto
@@ -15,11 +15,8 @@ $ clique duplo no index.html
 # Instale as dependências
 $ npm install
 
-# Execute a aplicação web
-$ npm start
-
 # Execute a API
-$ ?
+$ npm start
 
 # O servidor inciará na porta:3000 - acesse http://localhost:3000 
 
@@ -28,8 +25,8 @@ $ ?
 ## 🚀 Como o projeto foi iniciado
 
 Este projeto é divido em duas partes:
-1. Backend (curtas.tv) 
-2. Frontend ?
+1. Backend ? 
+2. Frontend (curtas.tv) 
 
 💡Esta aplicação precisa que o Backend esteja sendo executado para funcionar.
 
