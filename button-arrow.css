@@ -2,8 +2,8 @@
   border: 0px;
   background-color: transparent;
   color: var(--color-second);
-  width: 24px;
-  height: 48px;
+  width: 12px;
+  height: 24px;
   cursor: pointer;
 }
 
@@ -11,16 +11,16 @@
   content: "";
   display: block;
   box-sizing: border-box;
-  border: 48px solid transparent;
-  border-right: 24px solid var(--color-second);
+  border: 24px solid transparent;
+  border-right: 12px solid var(--color-second);
 }
 
 .button-arrow-right {
   border: 0px;
   background-color: transparent;
   color: var(--color-second);
-  width: 24px;
-  height: 48px;
+  width: 12px;
+  height: 24px;
   cursor: pointer;
 }
 
@@ -28,6 +28,10 @@
   content: "";
   display: block;
   box-sizing: border-box;
-  border: 48px solid transparent;
-  border-left: 24px solid var(--color-second);
+  border: 24px solid transparent;
+  border-left: 12px solid var(--color-second);
+}
+
+.direction {
+  display: none;
 }
