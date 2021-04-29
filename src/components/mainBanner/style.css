@@ -1,142 +1,138 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    font-size: 16px;
+    font-family: 'Bebas Neue', cursive;
 }
 
 body{
-    background: #000;
-    place-items: center;
-    height: 100vh;
+    min-height: 100vh;
+    background: #111;
 }
 
-#items-wrapper{
-    display: grid;
-    width: 100%;
-}
-
-#items{
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    scroll-behavior: smooth;
-}
-
-.item{
-    flex: none;
-    width: 100%;
-    height: 100vh;
-    scroll-snap-align: start;
-    pointer-events: none;
-}
-
-.banner{
+/* --- SECTION --- */
+section{
     position: relative;
-    padding: 0 6.25rem;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
 }
 
-.banner .bg{
-    position: absolute;
-    top: 0;
-    left: 0;
+.container{
+    width: 100%;
+    height: 480px;
+    overflow: hidden;
+    position: relative;
+}
+
+.slides{
     width: 100%;
     height: 100%;
-    object-fit: cover;
-}
-
-.content{
-    position: relative;
-    z-index: 1;
-    max-width: 550px;
-}
-
-.movieTitle{
-    font-size: 3rem;
-    color: #fff;
-    text-shadow: black 0.1em 0.1rem 0.1rem;
-}
-
-.banner .content h4{
-    color: rgba(255, 255, 255, 0.5);
-    text-shadow: black 0.1em 0.1rem 0.1rem;
-    font-weight: 500;
-}
-
-.banner .content h4 span{
-    padding: 0 0.75rem;
-    border-right: 1px solid rgba(255, 255, 255, 0.5);
-}
-
-.banner .content h4 span:first-child{
-    padding-left: 0;
-}
-
-.banner .content h4 span:last-child{
-    border-right: none;
-}
-
-.banner .content h4 span i{
-    background: #de0611;
-    color: #fff;
-    padding: 0 0.5rem;
-    display: inline-block;
-    font-style: normal;
-    border-radius: 2px;
-}
-
-.banner .content p{
-    font-size: 1rem;
-    font-weight: 300;
-    line-height: 1.5em;
-    color: #fff;
-    text-shadow: black 0.1rem 0.1rem 0.1rem;
-    margin: 0.75rem 0 1.25rem;
-}
-
-.banner .content .buttons {
+    animation: fade 1s ease-in-out;
     position: relative;
 }
 
-.banner .content .buttons a{
-    position: relative;
-    display: inline-block;
-    margin-right: 1rem;
-    background: #de0611;
-    color: #fff;
-    padding: 0.4rem 1.25rem;
-    text-decoration: none;
-    font-weight: 500;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    border-radius: 8px;
-}
-
-.banner .content .buttons a:nth-child(2) {
-    background: rgba(0, 0, 0, 0.5);
-    border: 1px solid rgba(255, 255, 255, 0.5);
-}
-
-.banner .content .buttons a:hover:nth-child(2){
-    background: #de0611;
-}
-
-
-@media(max-width: 991px){
-    .banner{
-        padding: 100px 50px;
+@keyframes fade{
+    to{
+        opacity: 1;
+    }
+    from{
+        opacity: 0;
     }
 }
 
-@media(max-width: 600px){
-    .banner{
-        padding: 220px 20px 120px;
+.slides img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    filter: brightness(60%);
+}
+
+.slides .content{
+    position: absolute;
+    left: 120px;
+    bottom: 100px;
+    color: #fff;
+    max-width: 400px;
+    text-shadow: 0 0 1px #000;
+}
+
+.content h2{
+    font-size: 2rem;
+    letter-spacing: 2px;
+}
+
+.content p{
+    line-height: 1.4rem;
+    margin: 10px 0;
+}
+
+.content a{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    background: #0009;
+    padding: 10px 15px;
+}
+
+.content a:hover{
+    background: chocolate;
+}
+
+/* --- CAROUSEL - ARROWS --- */
+.row{
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    position: relative;
+    margin-top: -30px;
+}
+
+.prev,
+.next{
+    position: absolute;
+    font-size: 4rem;
+    background: #0009;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 7px;
+    transform: translateY(-250px);
+    cursor: pointer;
+}
+
+.next{
+    right: 0;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 1100px){
+    ul{
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 960px) {
+    .prev,
+    .next{
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 760px){
+    .prev,
+    .next{
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 550px){
+    .slides .content{
+        left: 80px;
+        right: 80px;
+    }
+
+    .prev,
+    .next{
+        font-size: 1.5rem;
     }
 }

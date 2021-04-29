@@ -3,70 +3,93 @@ import React from 'react';
 const mainBanner = () => {
     return (
         <>
-            <div id="items-wrapper">
-                <div id="items">
-                    <div class="item banner">
-                        <img src="/day10_Carousel/img1.jpg" alt="" class="bg">
+            <section>
+                <div class="container">
+                    
+                    <div class="slides">
+                        <img src="/day11_CarouselTest/img/img1.jpg" alt="">
                         <div class="content">
-                            <h2 class="movieTitle">Nome do Curta</h2>
-                            <h4>
-                                <span>2020</span>
-                                <span><i>12+</i></span>
-                                <span>1h55</span>
-                                <span>Actions</span>
-                            </h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa labore quod est praesentium vitae fuga ea maiores, architecto cumque iste impedit cupiditate consectetur amet. Pariatur officia corrupti possimus tempore incidunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa labore quod est praesentium vitae fuga ea maiores, architecto cumque iste impedit cupiditate consectetur amet. </p>
-                            <div class="buttons">
-                                <a href="#"> > PLay</a>
-                            </div>
+                            <h2>Filme Title 01</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore dicta aspernatur quis quam. Cum consectetur eveniet voluptas eius corporis? Praesentium fugit officiis libero cum nemo magnam dicta, suscipit et eligendi.</p>
+                            <a href="#"><i class="fa fa-play" aria-hidden="true"></i>Assista aqui</a>
                         </div>
                     </div>
 
-                    <div class="item banner">
-                        <img src="/day10_Carousel/img2.jpg" alt="" class="bg">
+                    <div class="slides">
+                        <img src="/day11_CarouselTest/img/img2.jpg" alt="">
                         <div class="content">
-                            <h2 class="movieTitle">Nome do Curta</h2>
-                            <h4>
-                                <span>2020</span>
-                                <span><i>12+</i></span>
-                                <span>1h55</span>
-                                <span>Actions</span>
-                            </h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa labore quod est praesentium vitae fuga ea maiores, architecto cumque iste impedit cupiditate consectetur amet. Pariatur officia corrupti possimus tempore incidunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa labore quod est praesentium vitae fuga ea maiores, architecto cumque iste impedit cupiditate consectetur amet. </p>
-                            <div class="buttons">
-                                <a href="#"> > PLay</a>
-                            </div>
+                            <h2>Filme Title 02</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore dicta aspernatur quis quam. Cum consectetur eveniet voluptas eius corporis? Praesentium fugit officiis libero cum nemo magnam dicta, suscipit et eligendi.</p>
+                            <a href="#"><i class="fa fa-play" aria-hidden="true"></i>Assista aqui</a>
                         </div>
                     </div>
 
-                    <div class="item banner">
-                        <img src="/day10_Carousel/img3.jpg" alt="" class="bg">
+                    <div class="slides">
+                        <img src="/day11_CarouselTest/img/img3.jpg" alt="">
                         <div class="content">
-                            <h2 class="movieTitle">Nome do Curta</h2>
-                            <h4>
-                                <span>2020</span>
-                                <span><i>12+</i></span>
-                                <span>1h55</span>
-                                <span>Actions</span>
-                            </h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa labore quod est praesentium vitae fuga ea maiores, architecto cumque iste impedit cupiditate consectetur amet. Pariatur officia corrupti possimus tempore incidunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa labore quod est praesentium vitae fuga ea maiores, architecto cumque iste impedit cupiditate consectetur amet. </p>
-                            <div class="buttons">
-                                <a href="#"> > PLay</a>
-                            </div>
+                            <h2>Filme Title 03</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore dicta aspernatur quis quam. Cum consectetur eveniet voluptas eius corporis? Praesentium fugit officiis libero cum nemo magnam dicta, suscipit et eligendi.</p>
+                            <a href="#"><i class="fa fa-play" aria-hidden="true"></i>Assista aqui</a>
                         </div>
                     </div>
 
+                    <div class="slides">
+                        <img src="/day11_CarouselTest/img/img4.jpg" alt="">
+                        <div class="content">
+                            <h2>Filme Title 04</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore dicta aspernatur quis quam. Cum consectetur eveniet voluptas eius corporis? Praesentium fugit officiis libero cum nemo magnam dicta, suscipit et eligendi.</p>
+                            <a href="#"><i class="fa fa-play" aria-hidden="true"></i>Assista aqui</a>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="prev"><</div>
+                        <div class="next">></div>
+                    </div>
                 </div>
-            </div>
-            
+            </section>
+
             <script>
-                document.querySelector("#items").addEventListener("wheel", event => {
-                        if(event.deltaY > 0){
-                            event.target.scrollBy(300, 0);
-                        } else {
-                            event.target.scrollBy(-300, 0);
-                        }
-                    });
+                const slides = document.querySelectorAll('.slides');
+                let slideIndex = 0;
+                showSlide();
+
+                function showSlide(n){
+                    if(slideIndex > slides.length - 1){
+                        slideIndex = 0;
+                    }
+                    if(slideIndex < 0){
+                        slideIndex = slides.length - 1;
+                    }
+                    for (let i = 0; i < slides.length; i++){
+                        slides[i].style.display = "none";
+                    }
+                    slides[slideIndex].style.display = "block";
+                }
+                slides.forEach((item, index) => {
+                    item.addEventListener('click', () => {
+                        showSlide(slideIndex = index);
+                    })
+                });
+                
+                const prev = document.querySelector('.prev');
+                const next = document.querySelector('.next');
+
+                prev.addEventListener('click', () => {
+                    slides.scrollLeft -= slides[0].offsetWidth;
+                    showSlide(slideIndex -= 1);
+                    if(slideIndex === slides.length - 1){
+                        slides.scrollLeft = slides.scrollWidth;
+                    }
+                });
+
+                next.addEventListener('click', () => {
+                    slides.scrollLeft += slides[0].offsetWidth;
+                    showSlide(slideIndex += 1);
+                    if(slideIndex === 0){
+                        slides.scrollLeft = 0;
+                    }
+                });
             </script>
         </>
     );
