@@ -50,7 +50,7 @@ section{
 
 .slides .content{
     position: absolute;
-    left: 120px;
+    left: 10%;
     bottom: 100px;
     color: #fff;
     max-width: 400px;
@@ -81,7 +81,7 @@ section{
 
 /* --- CAROUSEL - ARROWS --- */
 .row{
-    width: 90%;
+    width: 95%;
     height: auto;
     margin: 0 auto;
     position: relative;
@@ -119,6 +119,11 @@ section{
 }
 
 @media (max-width: 760px){
+    .slides .content{
+        left: 80px;
+        right: 80px;
+    }
+    
     .prev,
     .next{
         font-size: 2.5rem;
