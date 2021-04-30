@@ -4,10 +4,9 @@ import { Link } from 'react-router-dom';
 const Cabecalho = () => {
     return (
         <>
-            <h1>
-                <Link to='/'>Home</Link>
-                Cabeçalho
-            </h1>
+            <nav className="navbar navbar-dark bg-dark">
+                <Link className="navbar-brand" to='/'>Home</Link>
+            </nav>
         </>
     );
 }
