@@ -1,0 +1,28 @@
+.main-header {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-items: center;
+  background-color: var(--color-black-second);
+  padding: 0px 30px;
+  margin-bottom: 30px;
+}
+
+.site-logo {
+  font-family: "Pacifico", cursive;
+  font-size: 55px;
+  color: var(--color-third);
+  order: 1;
+}
+
+.home {
+  font-size: 24px;
+  text-decoration: none;
+  color: var(--color-third);
+  order: 2;
+}
+
+.dot {
+  color: var(--color-first);
+}
