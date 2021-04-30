@@ -1,8 +1,8 @@
 import React from 'react';
 import './script'
-import style from '../mainBanner'
+import style from '../MainBanner'
 
-const mainBanner = () => {
+const MainBanner = () => {
     return (
         <>
             <section>
@@ -54,4 +54,4 @@ const mainBanner = () => {
     );
 }
 
-export default mainBanner;
+export default MainBanner;
