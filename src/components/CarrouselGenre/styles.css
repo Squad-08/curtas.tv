@@ -5,6 +5,7 @@
   background-color: var(--color-first);
   color: var(--color-third);
   text-align: center;
+  font-size: 24px;
 }
 
 .wrapper-poster {
