@@ -6,3 +6,15 @@
   color: var(--color-third);
   text-align: center;
 }
+
+.wrapper-poster .short-poster {
+  border: 1px solid var(--color-first);
+}
+
+.wrapper-poster .short-title {
+  color: var(--color-third);
+  width: 182px;
+  height: 60px;
+  font-size: 24px;
+  text-align: center;
+}
