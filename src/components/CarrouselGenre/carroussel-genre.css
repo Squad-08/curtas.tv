@@ -1,0 +1,15 @@
+.genre-title {
+  display: inline-block;
+  width: 375px;
+  height: 48px;
+  background-color: var(--color-first);
+  color: var(--color-third);
+  text-align: center;
+  font-size: 24px;
+  margin: 0px;
+}
+.carroussel-genre {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}

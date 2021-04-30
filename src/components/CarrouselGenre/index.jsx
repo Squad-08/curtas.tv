@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './styles.css';
 import './button-arrow.css';
+import './carroussel-genre.css';
+import './short-genre.css'
+import './wrapper-poster.css';
 import '../../assets/styles/base.css';
 
 const CarrouselGenre = () => {
     return (
-        <section class="genres"> 
-
             <section className="short-genre">
                 <h2 className="genre-title">Gênero dos Curtas</h2>
                 <div className="carroussel-genre">
@@ -41,8 +41,6 @@ const CarrouselGenre = () => {
                     <button class="button-arrow-right"><span class="direction">Próximo</span></button>
                 </div>
             </section>
-        </section>
-
     );
 }
 

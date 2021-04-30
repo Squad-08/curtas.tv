@@ -1,0 +1,20 @@
+.wrapper-poster {
+  display: flex;
+  flex-flow: column wrap;
+  width: 182px;
+  height: 338px;
+  align-items: center;
+  margin: 43px 41px 0px;
+}
+
+.wrapper-poster .short-poster {
+  border: 1px solid var(--color-first);
+}
+
+.wrapper-poster .short-title {
+  color: var(--color-third);
+  width: 182px;
+  height: 60px;
+  font-size: 24px;
+  text-align: center;
+}
