@@ -4,47 +4,47 @@ const mainBanner = () => {
     return (
         <>
             <section>
-                <div class="container">
+                <div className="container">
                     
-                    <div class="slides">
-                        <img src="/img/img1.jpg" alt="">
-                        <div class="content">
+                    <div className="slides">
+                        <img src="/img/img1.jpg" alt="" />
+                        <div className="content">
                             <h2>Filme Title 01</h2>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore dicta aspernatur quis quam. Cum consectetur eveniet voluptas eius corporis? Praesentium fugit officiis libero cum nemo magnam dicta, suscipit et eligendi.</p>
-                            <a href="#"><i class="fa fa-play" aria-hidden="true"></i>Assista aqui</a>
+                            <a href="#"><i className="fa fa-play" aria-hidden="true"></i>Assista aqui</a>
                         </div>
                     </div>
 
-                    <div class="slides">
-                        <img src="/img/img2.jpg" alt="">
-                        <div class="content">
+                    <div className="slides">
+                        <img src="/img/img2.jpg" alt="" />
+                        <div className="content">
                             <h2>Filme Title 02</h2>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore dicta aspernatur quis quam. Cum consectetur eveniet voluptas eius corporis? Praesentium fugit officiis libero cum nemo magnam dicta, suscipit et eligendi.</p>
-                            <a href="#"><i class="fa fa-play" aria-hidden="true"></i>Assista aqui</a>
+                            <a href="#"><i className="fa fa-play" aria-hidden="true"></i>Assista aqui</a>
                         </div>
                     </div>
 
-                    <div class="slides">
-                        <img src="/img/img3.jpg" alt="">
-                        <div class="content">
+                    <div className="slides">
+                        <img src="/img/img3.jpg" alt="" />
+                        <div className="content">
                             <h2>Filme Title 03</h2>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore dicta aspernatur quis quam. Cum consectetur eveniet voluptas eius corporis? Praesentium fugit officiis libero cum nemo magnam dicta, suscipit et eligendi.</p>
-                            <a href="#"><i class="fa fa-play" aria-hidden="true"></i>Assista aqui</a>
+                            <a href="#"><i className="fa fa-play" aria-hidden="true"></i>Assista aqui</a>
                         </div>
                     </div>
 
-                    <div class="slides">
-                        <img src="/img/img4.jpg" alt="">
-                        <div class="content">
+                    <div className="slides">
+                        <img src="/img/img4.jpg" alt="" />
+                        <div className="content">
                             <h2>Filme Title 04</h2>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore dicta aspernatur quis quam. Cum consectetur eveniet voluptas eius corporis? Praesentium fugit officiis libero cum nemo magnam dicta, suscipit et eligendi.</p>
-                            <a href="#"><i class="fa fa-play" aria-hidden="true"></i>Assista aqui</a>
+                            <a href="#"><i className="fa fa-play" aria-hidden="true"></i>Assista aqui</a>
                         </div>
                     </div>
 
-                    <div class="row">
-                        <div class="prev"><</div>
-                        <div class="next">></div>
+                    <div className="row">
+                        <div className="prev"> <i className="fa fa-chevron-left" aria-hidden="true"></i> </div>
+                        <div className="next"> <i className="fa fa-chevron-right" aria-hidden="true"></i> </div>
                     </div>
                 </div>
             </section>
