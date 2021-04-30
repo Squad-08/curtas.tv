@@ -1,5 +1,5 @@
 import React from "react";
-import mainBanner from '../../components/mainBanner'
+import MainBanner from '../../components/MainBanner'
 import CarrouselGenre from "../../components/CarrouselGenre";
 // import { Link } from "react-router-dom";
 
@@ -7,7 +7,7 @@ import CarrouselGenre from "../../components/CarrouselGenre";
 const PaginaInicial = () => {
   return (
     <>
-      <mainBanner />
+      <MainBanner />
       <CarrouselGenre />
     </>
   );

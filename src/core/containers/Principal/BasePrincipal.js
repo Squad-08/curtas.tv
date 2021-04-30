@@ -1,7 +1,7 @@
 import React from 'react';
 import Cabecalho from '../../../components/Cabecalho';
 import Rodape from '../../../components/Rodape';
-
+import '../../../assets/styles/reset.css';
 
 class BasePrincial extends React.Component {
     render() {
