@@ -1,8 +1,8 @@
 import React from 'react';
-import style from "../mainBanner/style.css";
+import './script'
+import style from '../mainBanner'
 
 const mainBanner = () => {
-
     return (
         <>
             <section>
