@@ -6,18 +6,18 @@
   align-items: center;
   background-color: var(--color-black-second);
   padding: 0px 30px;
-  margin-bottom: 30px;
+  margin-bottom: 45px;
 }
 
 .site-logo {
   font-family: "Pacifico", cursive;
-  font-size: 55px;
+  font-size: 40px;
   color: var(--color-third);
   order: 1;
 }
 
 .home {
-  font-size: 24px;
+  font-size: 20px;
   text-decoration: none;
   color: var(--color-third);
   order: 2;
