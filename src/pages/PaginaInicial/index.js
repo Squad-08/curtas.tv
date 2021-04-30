@@ -1,6 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import mainBanner from '../../components/mainBanner'
 import CarrouselGenre from "../../components/CarrouselGenre";
+// import { Link } from "react-router-dom";
+
 
 const PaginaInicial = () => {
   return (
