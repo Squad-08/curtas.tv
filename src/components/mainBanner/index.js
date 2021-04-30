@@ -43,8 +43,8 @@ const mainBanner = () => {
                     </div>
 
                     <div className="row">
-                        <div className="prev"> < </div>
-                        <div className="next"> > </div>
+                        <div className="prev"> <i className="fa fa-chevron-left" aria-hidden="true"></i> </div>
+                        <div className="next"> <i className="fa fa-chevron-right" aria-hidden="true"></i> </div>
                     </div>
                 </div>
             </section>
