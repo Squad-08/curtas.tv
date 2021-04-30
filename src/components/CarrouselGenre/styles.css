@@ -1,11 +1,17 @@
 .genre-title {
-  display: block;
+  display: inline-block;
   width: 375px;
   height: 48px;
   background-color: var(--color-first);
   color: var(--color-third);
   text-align: center;
   font-size: 24px;
+  margin: 0px;
+}
+.carroussel-genre {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
 }
 
 .wrapper-poster {
@@ -14,6 +20,7 @@
   width: 182px;
   height: 338px;
   align-items: center;
+  margin: 43px 41px 0px;
 }
 
 .wrapper-poster .short-poster {
