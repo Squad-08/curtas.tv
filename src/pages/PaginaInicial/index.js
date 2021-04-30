@@ -5,7 +5,7 @@ import mainBanner from '../../components/mainBanner';
 const PaginaInicial = () => {
     return (
         <>
-            <mainBanner /> 
+            <mainBanner />
 
             <h1>Página inicial</h1>
             <br />
