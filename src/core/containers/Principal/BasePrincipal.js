@@ -1,6 +1,6 @@
 import React from 'react';
-import Cabecalho from '../../Components/Cabecalho';
-import Rodape from '../../Components/Rodape';
+import Cabecalho from '../../../components/Cabecalho';
+import Rodape from '../../../components/Rodape';
 
 
 class BasePrincial extends React.Component {
