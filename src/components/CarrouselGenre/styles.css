@@ -7,6 +7,14 @@
   text-align: center;
 }
 
+.wrapper-poster {
+  display: flex;
+  flex-flow: column wrap;
+  width: 182px;
+  height: 338px;
+  align-items: center;
+}
+
 .wrapper-poster .short-poster {
   border: 1px solid var(--color-first);
 }
