@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './styles.css';
-import '../../assets/styles/base.css';
+import '../../assets/styles/base.css'
 
 const CarrouselGenre = () => {
     return (
