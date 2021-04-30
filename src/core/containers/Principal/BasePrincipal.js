@@ -8,15 +8,16 @@ class BasePrincial extends React.Component {
         return (
             <>
                 <Cabecalho />
-                <section class="row">
-                    <div className="d-flex">
-                        {this.props.children}
-                    </div>
-                </section>
+                <main role="main">
+
+                    <section class="jumbotron text-center">
+                        <div class="container">
+                            {this.props.children}
+                        </div>
+                    </section>
+                </main>
                 <Rodape />
             </>
-
-
         );
     }
 }
