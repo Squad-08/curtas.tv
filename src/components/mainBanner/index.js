@@ -7,7 +7,7 @@ const mainBanner = () => {
                 <div className="container">
                     
                     <div className="slides">
-                        <img src="/img/img1.jpg" alt="">
+                        <img src="/img/img1.jpg" alt="" />
                         <div className="content">
                             <h2>Filme Title 01</h2>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore dicta aspernatur quis quam. Cum consectetur eveniet voluptas eius corporis? Praesentium fugit officiis libero cum nemo magnam dicta, suscipit et eligendi.</p>
@@ -16,7 +16,7 @@ const mainBanner = () => {
                     </div>
 
                     <div className="slides">
-                        <img src="/img/img2.jpg" alt="">
+                        <img src="/img/img2.jpg" alt="" />
                         <div className="content">
                             <h2>Filme Title 02</h2>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore dicta aspernatur quis quam. Cum consectetur eveniet voluptas eius corporis? Praesentium fugit officiis libero cum nemo magnam dicta, suscipit et eligendi.</p>
@@ -25,7 +25,7 @@ const mainBanner = () => {
                     </div>
 
                     <div className="slides">
-                        <img src="/img/img3.jpg" alt="">
+                        <img src="/img/img3.jpg" alt="" />
                         <div className="content">
                             <h2>Filme Title 03</h2>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore dicta aspernatur quis quam. Cum consectetur eveniet voluptas eius corporis? Praesentium fugit officiis libero cum nemo magnam dicta, suscipit et eligendi.</p>
@@ -34,7 +34,7 @@ const mainBanner = () => {
                     </div>
 
                     <div className="slides">
-                        <img src="/img/img4.jpg" alt="">
+                        <img src="/img/img4.jpg" alt="" />
                         <div className="content">
                             <h2>Filme Title 04</h2>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore dicta aspernatur quis quam. Cum consectetur eveniet voluptas eius corporis? Praesentium fugit officiis libero cum nemo magnam dicta, suscipit et eligendi.</p>
@@ -43,8 +43,8 @@ const mainBanner = () => {
                     </div>
 
                     <div className="row">
-                        <div className="prev"><</div>
-                        <div className="next">></div>
+                        <div className="prev"> < </div>
+                        <div className="next"> > </div>
                     </div>
                 </div>
             </section>
