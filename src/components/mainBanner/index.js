@@ -1,4 +1,6 @@
 import React from 'react';
+import scriptMainBanner from './script';
+import "./styles.css";
 
 const mainBanner = () => {
     return (
