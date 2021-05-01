@@ -8,9 +8,9 @@ class BasePrincial extends React.Component {
         return (
             <>
                 <Cabecalho />
-                <main role="main">
-                    <section className="jumbotron text-center">
-                        <div className="container">
+                <main>
+                    <section>
+                        <div>
                             {this.props.children}
                         </div>
                     </section>
