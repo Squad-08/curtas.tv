@@ -1,8 +1,10 @@
 import React from 'react';
 import BasePrincial from './BasePrincipal';
+import { connect } from 'react-redux';
+import * as actionsFilme from '../../actions/actionsFilme';
 
 const Principal = (Component) => {
-    return class extends React.Component {
+    class ComponentPrincipal extends React.Component {
         render() {
             return (
                 <>
@@ -13,6 +15,12 @@ const Principal = (Component) => {
             );
         }
     }
+
+    const mapStateToProps = state => ({
+        filmes: state.filme.filmes
+    });
+
+    return connect(mapStateToProps, actionsFilme)(ComponentPrincipal);
 }
 
 export default Principal;
