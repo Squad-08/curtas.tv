@@ -58,6 +58,9 @@ $ npm install --save history
 $ npm install --save bootstrap
 $ npm install --save reactstrap
 
+#Redux compartilha estados entre páginas/componentes
+$ npm install --save redux react-redux redux-thunk
+
 #Realizar chamada para API
 $ npm install --save axios
 
