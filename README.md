@@ -61,7 +61,7 @@ $ npm install --save reactstrap
 #Redux compartilha estados entre páginas/componentes
 $ npm install --save redux react-redux redux-thunk
 
-#Realizar chamada para API
+#Realizar conexão com a API
 $ npm install --save axios
 
 # Execute o projeto
