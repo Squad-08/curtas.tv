@@ -1,11 +1,11 @@
 import React from 'react';
+import styles from './styles.css'
 
 const BannerTelaFilme = () => {
     return (
         <>
-            <h1>
-                Curta 1
-            </h1>
+                <div className="imagembannertelafilme">
+                </div>
         </>
     );
 }

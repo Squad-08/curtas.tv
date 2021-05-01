@@ -4,7 +4,7 @@ const SinopseTelaFilme = () => {
     return (
         <>
             <h1>
-                Título - Curta 1
+                Sinopse - Curta 1
             </h1>
         </>
     );

@@ -2,15 +2,18 @@ import React from 'react';
 import BannerTelaFilme from '../../components/BannerTelaFilme'
 import SinopseTelaFilme from '../../components/SinopseTelaFilme'
 import Video from '../../components/Video'
+import TituloTelaFilme from '../../components/TituloTelaFilme'
+import '../../assets/styles/base.css';
 
 const Filme = () => {
     return (
         <>
         <div>
-            <h1>Filme selecionado</h1>
+            <TituloTelaFilme />
             <BannerTelaFilme /> 
             <SinopseTelaFilme />
             <Video />
+            
         </div>
         </>
     );
