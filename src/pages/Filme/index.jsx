@@ -12,8 +12,7 @@ const Filme = () => {
             <TituloTelaFilme />
             <BannerTelaFilme /> 
             <SinopseTelaFilme />
-            <Embed />
-            
+            <Embed />            
         </div>
         </>
     );
