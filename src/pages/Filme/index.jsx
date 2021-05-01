@@ -1,9 +1,9 @@
 import React from 'react';
 import BannerTelaFilme from '../../components/BannerTelaFilme'
 import SinopseTelaFilme from '../../components/SinopseTelaFilme'
-import Video from '../../components/Video'
 import TituloTelaFilme from '../../components/TituloTelaFilme'
 import '../../assets/styles/base.css';
+import Embed from '../../components/Embed';
 
 const Filme = () => {
     return (
@@ -12,7 +12,7 @@ const Filme = () => {
             <TituloTelaFilme />
             <BannerTelaFilme /> 
             <SinopseTelaFilme />
-            <Video />
+            <Embed />
             
         </div>
         </>
