@@ -8,15 +8,4 @@
   text-align: center;
   padding: 9px 0px;
 }
-
-        <section className='main-carroussel'>
-            <ButtonArrowLeft />
-            <img src={shortThumbnail1} alt="Thumbnail do Curta"/>
-            <h2 className='movie-title-carroussel'>Here Is The Plan</h2>
-            <ButtonArrowRight />
-        </section>
-        
-        import shortThumbnail1 from './img/shortThumbnail1.png'
-import ButtonArrowLeft from '../ButtonArrowLeft';
-import ButtonArrowRight from '../ButtonArrowRight';
 */
