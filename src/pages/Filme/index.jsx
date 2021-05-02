@@ -5,7 +5,6 @@ import BannerTelaFilme from '../../components/BannerTelaFilme';
 import SinopseTelaFilme from '../../components/SinopseTelaFilme';
 import TituloTelaFilme from '../../components/TituloTelaFilme';
 //import ScriptEmbedJS from '../../assets/js/embed';
-import '../../assets/styles/base.css';
 import Embed from '../../components/Embed';
 
 class Filme extends Component {
