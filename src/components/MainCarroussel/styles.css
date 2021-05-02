@@ -1,8 +1,8 @@
-.movie-thumbnail-carroussel {
+.short-thumbnail-carroussel {
   border: 1px solid var(--color-first);
 }
 
-.movie-title-carroussel {
+.short-title-carroussel {
   display: inline-block;
   width: 355px;
   height: 48px;
