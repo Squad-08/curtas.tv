@@ -9,7 +9,7 @@ const MainCarroussel = () => {
 
         <section className='main-carroussel'>
             <ButtonArrowLeft />
-            <img src={shortThumbnail1} alt="Thumbnail do Curta"/>
+            <img className="movie-thumbnail-carroussel"src={shortThumbnail1} alt="Thumbnail do Curta"/>
             <h2 className='movie-title-carroussel'>Here Is The Plan</h2>
             <ButtonArrowRight />
         </section>
