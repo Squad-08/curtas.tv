@@ -1,11 +1,11 @@
 import React from 'react';
+import './styles.css'
 
 const SinopseTelaFilme = () => {
     return (
         <>
-            <h1>
-                Sinopse - Curta 1
-            </h1>
+            <div className="sinopsesegundatela"> Sinopse - Curta 1
+            </div>
         </>
     );
 }

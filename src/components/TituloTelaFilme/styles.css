@@ -1,12 +1,13 @@
 
 .titulodocurta{
-    position: relative;
-    margin-top: 123px;
-    height: 490px;
+    position: absolute;
+    margin-left: 350px;
+    margin-top: 13px;
+    height: 10px;
     width: 370px;
-    right: 0%;
-    top: 0%;
-    bottom: 0%;
+    padding: 30px;
     background: #FF8303;
+    float: 50px;
+    
 }
 

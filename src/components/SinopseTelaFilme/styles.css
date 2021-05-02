@@ -1,0 +1,11 @@
+.sinopsesegundatela { 
+    position: relative;
+    width: 50%;
+    height: 200px;
+    left: 350px;
+    margin-top: 0px;
+    bottom: 200px;
+    background: #1B1A17;
+    border: 1px solid #FF8303;
+    box-sizing: border-box;
+}
