@@ -23,6 +23,7 @@ class Filme extends Component {
     componentDidMount() {
         const { id } = this.props.match.params;
         this.buscarFilme(id);
+        console.log('Id do filme é = '+id);
     }
 
     render() {

@@ -14,7 +14,7 @@ const Routes = () => {
                 <BrowserRouter>
                     <Switch>
                         <Route path="/" exact component={Principal(PaginaInicial)} />
-                        <Route path="/filme/:id" exact component={Principal(Filme)} />
+                        <Route path="/filme/:id" component={Principal(Filme)} />
                     </Switch>
                 </BrowserRouter>
             </Router>
