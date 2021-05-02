@@ -1,9 +1,0 @@
-.short-genre {
-  display: flex;
-  flex-flow: row wrap;
-  margin-bottom: 40px;
-}
-
-.short-genre:first-of-type {
-  margin-top: 80px;
-}
