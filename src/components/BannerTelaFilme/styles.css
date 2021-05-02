@@ -1,24 +1,20 @@
-
 .imagembannertelafilme {
-    position: relative;
+  position: relative;
 
-    margin-top: 13px;
+  margin-top: 13px;
 
-    width: 60px;
+  width: 60px;
 
-    padding: 100px;
+  padding: 100px;
 
-    height: 300px;
-    left: 80px;
-    top: 13px;
-    background: url('https://images-na.ssl-images-amazon.com/images/I/81eEHlCkLsL._AC_SL1500_.jpg');
-    border: 5px solid #FF8303;
+  height: 300px;
+  left: 80px;
+  top: 13px;
+  background: url("https://images-na.ssl-images-amazon.com/images/I/81eEHlCkLsL._AC_SL1500_.jpg");
+  border: 5px solid #ff8303;
 
-
-    box-sizing: border-box;
-    background-position: center;
-    background-repeat: no-repeat; 
-    background-size: cover;
-
+  box-sizing: border-box;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-
