@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import CarrouselGenre from "../../components/CarrouselGenre";
+import MainCarroussel from "../../components/MainCarroussel";
 import { connect } from "react-redux";
 import * as actionsFilmes from "../../core/actions/actionsFilme";
 
@@ -19,6 +20,7 @@ class PaginaInicial extends Component {
   render() {
     return (
       <>
+        <MainCarroussel />
         <CarrouselGenre />
       </>
     );
