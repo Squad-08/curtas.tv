@@ -1,44 +1,19 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import './button-arrow.css';
-import './carroussel-genre.css';
-import './short-genre.css'
-import './wrapper-poster.css';
+import './styles.css';
 import '../../assets/styles/base.css';
+import WrapperPoster from '../WrapperPoster';
+import ButtonArrowLeft from '../ButtonArrowLeft';
+import ButtonArrowRight from '../ButtonArrowRight';
+import GenreTitle from '../GenreTitle';
 
 const CarrouselGenre = () => {
     return (
             <section className="short-genre">
-                <h2 className="genre-title">Gênero dos Curtas</h2>
+                <GenreTitle />
                 <div className="carroussel-genre">
-                    <button class="button-arrow-left"><span class="direction">Anterior</span></button>
-                    
-                    <figure className="wrapper-poster">
-                        <img src="https://m.media-amazon.com/images/M/MV5BZDMxNjhiZmYtY2YyMC00NWFkLWI0ZWEtYmJkZThhMjlhYWE1XkEyXkFqcGdeQXVyMjUxMTY3ODM@._V1_UY268_CR43,0,182,268_AL_.jpg" alt="Poster Sweet Tooth" className="short-poster"/>
-                        <figcaption className="short-title">Sweet Tooth</figcaption>
-                    </figure>
-
-                    <figure className="wrapper-poster">
-                        <img src="https://m.media-amazon.com/images/M/MV5BZDMxNjhiZmYtY2YyMC00NWFkLWI0ZWEtYmJkZThhMjlhYWE1XkEyXkFqcGdeQXVyMjUxMTY3ODM@._V1_UY268_CR43,0,182,268_AL_.jpg" alt="Poster Sweet Tooth" className="short-poster"/>
-                        <figcaption className="short-title">Sweet Tooth</figcaption>
-                    </figure>
-
-                    <figure className="wrapper-poster">
-                        <img src="https://m.media-amazon.com/images/M/MV5BZDMxNjhiZmYtY2YyMC00NWFkLWI0ZWEtYmJkZThhMjlhYWE1XkEyXkFqcGdeQXVyMjUxMTY3ODM@._V1_UY268_CR43,0,182,268_AL_.jpg" alt="Poster Sweet Tooth" className="short-poster"/>
-                        <figcaption className="short-title">Sweet Tooth</figcaption>
-                    </figure>
-
-                    <figure className="wrapper-poster">
-                        <img src="https://m.media-amazon.com/images/M/MV5BZDMxNjhiZmYtY2YyMC00NWFkLWI0ZWEtYmJkZThhMjlhYWE1XkEyXkFqcGdeQXVyMjUxMTY3ODM@._V1_UY268_CR43,0,182,268_AL_.jpg" alt="Poster Sweet Tooth" className="short-poster"/>
-                        <figcaption className="short-title">Sweet Tooth</figcaption>
-                    </figure>
-
-                    <figure className="wrapper-poster">
-                        <img src="https://m.media-amazon.com/images/M/MV5BZDMxNjhiZmYtY2YyMC00NWFkLWI0ZWEtYmJkZThhMjlhYWE1XkEyXkFqcGdeQXVyMjUxMTY3ODM@._V1_UY268_CR43,0,182,268_AL_.jpg" alt="Poster Sweet Tooth" className="short-poster"/>
-                        <figcaption className="short-title">Sweet Tooth</figcaption>
-                    </figure>
-                    
-                    <button class="button-arrow-right"><span class="direction">Próximo</span></button>
+                    <ButtonArrowLeft />
+                    <WrapperPoster />
+                    <ButtonArrowRight />
                 </div>
             </section>
     );

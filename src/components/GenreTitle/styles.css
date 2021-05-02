@@ -8,8 +8,3 @@
   font-size: 24px;
   margin: 0px;
 }
-.carroussel-genre {
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-}
