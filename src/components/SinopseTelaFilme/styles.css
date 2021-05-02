@@ -9,3 +9,8 @@
     border: 1px solid #FF8303;
     box-sizing: border-box;
 }
+
+.sinopsesegundatela p {
+    text-align: center;
+    color: white;
+}

@@ -5,10 +5,17 @@
     height: 0;
 }
 
-.embed-responsive-embed-responsive-16by9 inframe {
-    left: 50px;
-    top: 70px;
-    height: 90px;
-    width: 90px;
+.embed-responsive-embed-responsive-16by9 iframe {
+   
     position: absolute;
+    width: 800px;
+    height: 450px;
+    left: 90px;
+    top: 70px;
+
+    box-sizing: border-box;
+    background-repeat: no-repeat; 
+    background-size: cover;
+
+    
 }

@@ -5,6 +5,7 @@ const SinopseTelaFilme = () => {
     return (
         <>
             <div className="sinopsesegundatela"> Sinopse - Curta 1
+            <p>Esse curta é sobre...</p>
             </div>
         </>
     );
