@@ -4,6 +4,7 @@
   height: 48px;
   line-height: 30px;
   background-color: var(--color-black-second);
+  color: var(--color-third);
   font-size: 24px;
   text-align: center;
   padding: 9px 0px;
