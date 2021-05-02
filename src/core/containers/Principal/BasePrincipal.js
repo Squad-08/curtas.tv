@@ -10,11 +10,7 @@ class BasePrincial extends React.Component {
             <>
                 <Cabecalho />
                 <main>
-                    <section>
-                        <div>
-                            {this.props.children}
-                        </div>
-                    </section>
+                    {this.props.children}
                 </main>
                 <Rodape />
             </>
