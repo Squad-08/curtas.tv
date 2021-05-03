@@ -2,8 +2,8 @@ import React from 'react';
 import './styles.css';
 import ButtonArrowLeft from '../ButtonArrowLeft';
 import ButtonArrowRight from '../ButtonArrowRight';
-import ShortTitleCarroussel from './ShortTitleCarroussel';
-import ShortThumbnailCarroussel from './ShortThumbnailCarroussel';
+import ShortThumbnailCarroussel from '../ShortThumbnailCarroussel';
+import ShortTitleCarroussel from '../ShortTitleCarroussel';
 
 const MainCarroussel = () => {
     return (

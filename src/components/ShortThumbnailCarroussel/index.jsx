@@ -1,6 +1,6 @@
 import React from 'react';
 import './styles.css';
-import shortThumbnail1 from '../img/shortThumbnail1.png'
+import shortThumbnail1 from './img/shortThumbnail1.png'
 
 const ShortThumbnailCarroussel = () => {
     return (
