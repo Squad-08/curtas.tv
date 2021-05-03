@@ -1,5 +1,15 @@
+.main-carroussel {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  margin: 0px 24px 80px;
+}
+
 .wrapper-thumbnail {
   display: inline;
+  margin: 0px 15px;
 }
 
 .short-thumbnail-carroussel {
