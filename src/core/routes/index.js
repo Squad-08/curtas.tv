@@ -1,11 +1,12 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route, Router } from 'react-router-dom';
+import { BrowserRouter, Switch, Route, Router, Redirect } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from '../store';
 import { history } from '../routes/history';
 import Principal from '../containers/Principal';
 import Filme from '../../pages/Filme';
 import PaginaInicial from '../../pages/PaginaInicial';
+import PaginaInexistente from '../../pages/PaginaInexistente';
 
 const Routes = () => {
     return (
@@ -15,6 +16,8 @@ const Routes = () => {
                     <Switch>
                         <Route path="/" exact component={Principal(PaginaInicial)} />
                         <Route path="/filme/:id" component={Principal(Filme)} />
+                        <Route path='/pagina-inexistente' component={Principal(PaginaInexistente)} />
+                        <Redirect from='*' to='/pagina-inexistente' />
                     </Switch>
                 </BrowserRouter>
             </Router>
