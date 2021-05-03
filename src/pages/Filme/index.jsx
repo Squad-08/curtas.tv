@@ -22,7 +22,7 @@ class Filme extends Component {
     componentDidMount() {
         const { id } = this.props.match.params;
         this.buscarFilme(id);
-        console.log('Id do filme é = '+id);
+        console.log('Id do filme é = ' + id);
     }
 
     render() {
@@ -31,7 +31,9 @@ class Filme extends Component {
                 <TituloTelaFilme />
                 <BannerTelaFilme />
                 <SinopseTelaFilme />
-                <Embed />
+                <Embed
+                    title="Não definido"
+                    src="https://www.youtube.com/watch?v=6IuQUgeDPg0" />
             </>
         );
     }
