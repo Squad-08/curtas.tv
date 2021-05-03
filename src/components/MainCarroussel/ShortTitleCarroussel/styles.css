@@ -1,0 +1,12 @@
+.short-title-carroussel {
+  position: absolute;
+  width: 355px;
+  height: 48px;
+  line-height: 30px;
+  background-color: var(--color-black-second);
+  color: var(--color-third);
+  font-size: 24px;
+  text-align: center;
+  padding: 9px 0px;
+  margin: -66px 0px 0px 853px;
+}
