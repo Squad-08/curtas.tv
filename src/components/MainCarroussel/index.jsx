@@ -7,10 +7,10 @@ import ButtonArrowRight from '../ButtonArrowRight';
 const MainCarroussel = () => {
     return (
         <section className='main-carroussel'>
-            <ButtonArrowLeft />
-            <img className="short-thumbnail-carroussel"src={shortThumbnail1} alt="Thumbnail do Curta"/>
-            <h2 className='short-title-carroussel'>Here Is The Plan</h2>
-            <ButtonArrowRight />
+            <div className="wrapper-thumbnail">
+                <img className="short-thumbnail-carroussel"src={shortThumbnail1} alt="Thumbnail do Curta"/>
+                <h2 className="short-title-carroussel">Here Is The Plan</h2>
+            </div>
         </section>
     )
 }
