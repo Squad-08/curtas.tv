@@ -10,3 +10,8 @@
   line-height: 30px;
   padding: 9px 0px;
 }
+
+.background-genre-title {
+  display: block;
+  width: 100%;
+}
