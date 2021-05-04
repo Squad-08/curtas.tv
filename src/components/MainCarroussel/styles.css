@@ -1,8 +1,4 @@
-.main-carroussel {
+.carroussel-position {
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  align-items: center;
-  align-content: center;
-  margin: 0px 24px 80px;
+  justify-content: center;
 }
