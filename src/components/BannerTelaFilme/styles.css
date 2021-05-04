@@ -1,14 +1,17 @@
 
 .imagembannertelafilme {
     position: relative;
-
     margin-top: 13px;
-
-    width: 60px;
+    
+    width: 90%;
+    max-width: 60px;
+    min-width: 30px;
 
     padding: 100px;
 
     height: 300px;
+
+    
     left: 80px;
     top: 13px;
     background: url('https://images-na.ssl-images-amazon.com/images/I/81eEHlCkLsL._AC_SL1500_.jpg');

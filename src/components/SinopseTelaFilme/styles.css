@@ -1,13 +1,17 @@
 .sinopsesegundatela { 
     position: relative;
-    width: 50%;
+    
     height: 200px;
     left: 350px;
+    padding-right: 1em;
     margin-top: 0px;
     bottom: 200px;
     background: #1B1A17;
     border: 1px solid #FF8303;
     box-sizing: border-box;
+
+    width: 90%;
+    max-width: 570px;
 }
 
 .sinopsesegundatela p {
