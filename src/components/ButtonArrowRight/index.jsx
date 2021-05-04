@@ -3,7 +3,7 @@ import './styles.css'
 
 const ButtonArrowRight = () => {
     return (
-        <button class="button-arrow-right"><span class="direction">Próximo</span></button>
+        <button className="button-arrow-right"><span className="direction">Próximo</span></button>
     );
 }
 

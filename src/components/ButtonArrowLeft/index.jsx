@@ -3,7 +3,7 @@ import './styles.css'
 
 const ButtonArrowLeft = () => {
     return (
-        <button class="button-arrow-left"><span class="direction">Anterior</span></button>
+        <button className="button-arrow-left"><span className="direction">Anterior</span></button>
     );
 }
 

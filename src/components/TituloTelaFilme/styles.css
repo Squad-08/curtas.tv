@@ -1,18 +1,15 @@
-
-.titulodocurta{
-    position: absolute;
-    margin-left: 350px;
-    margin-top: 13px;
-    height: 10px;
-    width: 370px;
-    padding: 18px;
-    background: #FF8303;
-    float: 50px;
-    
+.titulodocurta {
+  position: absolute;
+  margin-left: 350px;
+  margin-top: 13px;
+  height: 10px;
+  width: 370px;
+  padding: 18px;
+  background: #ff8303;
+  float: 50px;
 }
 
 h3 {
-    text-align: center;
-    color: #f0e3ca; 
-
+  text-align: center;
+  color: #f0e3ca;
 }
