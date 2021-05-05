@@ -12,7 +12,9 @@ const CarrouselGenre = () => {
                 <GenreTitle />
                 <div className="carroussel-genre">
                     <ButtonArrowLeft />
-                    <WrapperPoster />
+                    <div className="carroussel-items">
+                        <WrapperPoster />
+                    </div>
                     <ButtonArrowRight />
                 </div>
             </section>
