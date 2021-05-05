@@ -2,19 +2,5 @@
   border: 0px;
   background-color: transparent;
   color: var(--color-second);
-  width: 12px;
-  height: 24px;
-  cursor: pointer;
-}
-
-.button-arrow-right::after {
-  content: "";
-  display: block;
-  box-sizing: border-box;
-  border: 24px solid transparent;
-  border-left: 12px solid var(--color-second);
-}
-
-.direction {
-  display: none;
+  font-size: 24px;
 }
