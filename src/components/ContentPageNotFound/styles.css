@@ -1,4 +1,14 @@
 .message-title {
   color: var(--color-first);
   font-size: 30px;
+  line-height: 37.5px;
+}
+
+.message {
+  color: var(--color-third);
+  font-size: 15px;
+  width: 580px;
+  height: 60px;
+  text-align: right;
+  line-height: 18.75px;
 }
