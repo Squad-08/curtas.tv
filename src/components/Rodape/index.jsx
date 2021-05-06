@@ -1,12 +1,11 @@
 import React from 'react';
+import './styles.css'
+import LogoFCamara from './img/logo-fcamara.png';
 
 const Rodape = () => {
     return (
-        <>
-            <div>
-                Rodape
-            </div>
-        </>
+        <footer className="main-footer">
+        </footer>
     );
 }
 
