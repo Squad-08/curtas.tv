@@ -1,3 +1,8 @@
+.wrapper-data {
+  display: flex;
+  flex-flow: column wrap;
+}
+
 .short-data .short-poster {
   width: 372px;
   height: 551px;
@@ -16,6 +21,7 @@
 }
 
 .short-data .short-sinopse {
+  margin-top: 30px;
   display: inline-block;
   width: 832px;
   background-color: var(--color-black-second);
