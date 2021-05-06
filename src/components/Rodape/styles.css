@@ -9,3 +9,10 @@
   width: 160px;
   height: 35px;
 }
+
+.main-footer .made-by {
+  width: 125px;
+  height: 65px;
+  text-align: right;
+  font-size: 10px;
+}
