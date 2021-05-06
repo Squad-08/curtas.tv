@@ -1,19 +1,30 @@
-.message-title {
+.message-page-not-found {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.message-image {
+  width: 317px;
+  height: 317px;
+}
+
+.wrapper-message {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: flex-end;
+}
+
+.wrapper-message .message-title {
   color: var(--color-first);
   font-size: 30px;
   line-height: 37.5px;
 }
 
-.message {
+.wrapper-message .message {
   color: var(--color-third);
   font-size: 15px;
   width: 580px;
   height: 60px;
   text-align: right;
   line-height: 18.75px;
-}
-
-.message-image {
-  width: 317px;
-  height: 317px;
 }
