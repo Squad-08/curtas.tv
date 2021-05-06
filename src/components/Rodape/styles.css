@@ -21,3 +21,13 @@
   text-align: right;
   font-size: 10px;
 }
+
+@media (max-width: 460px) {
+  .main-footer {
+    flex-flow: column wrap;
+    justify-content: space-around;
+  }
+  .main-footer .made-by {
+    text-align: center;
+  }
+}
