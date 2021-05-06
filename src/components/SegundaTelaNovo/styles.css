@@ -1,6 +1,13 @@
+.short-data {
+  display: flex;
+  justify-content: space-around;
+}
+
 .wrapper-data {
   display: flex;
   flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .short-data .short-poster {
@@ -10,7 +17,7 @@
 }
 
 .short-data .short-title {
-  width: 550px;
+  width: 440px;
   height: 48px;
   background-color: var(--color-first);
   color: var(--color-third);
@@ -23,7 +30,7 @@
 .short-data .short-sinopse {
   margin-top: 30px;
   display: inline-block;
-  width: 832px;
+  width: 720px;
   background-color: var(--color-black-second);
   color: var(--color-third);
   font-size: 24px;
