@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as asctionsFilme from '../../core/actions/actionsFilme';
-import BannerTelaFilme from '../../components/BannerTelaFilme';
-import SinopseTelaFilme from '../../components/SinopseTelaFilme';
-import TituloTelaFilme from '../../components/TituloTelaFilme';
+//import BannerTelaFilme from '../../components/BannerTelaFilme';
+//import SinopseTelaFilme from '../../components/SinopseTelaFilme';
+//import TituloTelaFilme from '../../components/TituloTelaFilme';
 //import ScriptEmbedJS from '../../assets/js/embed';
-import Embed from '../../components/Embed';
+//import Embed from '../../components/Embed';
 
 class Filme extends Component {
 
@@ -26,14 +26,7 @@ class Filme extends Component {
     }
 
     render() {
-        return (
-            <>
-                <TituloTelaFilme />
-                <BannerTelaFilme />
-                <SinopseTelaFilme />
-                <Embed />
-            </>
-        );
+        return ('');
     }
 }
 
