@@ -28,4 +28,51 @@
   height: 60px;
   text-align: right;
   line-height: 18.75px;
+  padding-top: 10px;
+}
+
+@media (max-width: 1036px) {
+  .wrapper-message {
+    align-items: center;
+  }
+  .wrapper-message .message-title {
+    text-align: center;
+  }
+  .wrapper-message .message {
+    text-align: center;
+  }
+}
+
+@media (max-width: 765px) {
+  .message-image {
+    width: 256px;
+    height: 256px;
+  }
+
+  .wrapper-message {
+    align-items: center;
+  }
+
+  .wrapper-message .message-title {
+    font-size: 20px;
+    line-height: 27.5px;
+  }
+
+  .wrapper-message .message {
+    font-size: 10px;
+    line-height: 13.75px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 590px) {
+  .wrapper-message .message-title {
+    padding: 0px 10px;
+    text-align: center;
+  }
+
+  .wrapper-message .message {
+    width: 100%;
+    padding: 10px 20px 0px;
+  }
 }
