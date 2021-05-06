@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import SegundaTela from '../../components/SegundaTelaNovo';
 import * as asctionsFilme from '../../core/actions/actionsFilme';
 //import BannerTelaFilme from '../../components/BannerTelaFilme';
 //import SinopseTelaFilme from '../../components/SinopseTelaFilme';
@@ -26,7 +27,8 @@ class Filme extends Component {
     }
 
     render() {
-        return ('');
+        return (
+            <SegundaTela />);
     }
 }
 
