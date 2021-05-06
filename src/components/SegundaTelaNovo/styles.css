@@ -38,3 +38,65 @@
   line-height: 30px;
   padding: 52px 28px;
 }
+
+@media (max-width: 1135px) {
+  .short-data .short-poster {
+    width: 273px;
+    height: 402px;
+  }
+  .short-data .short-title {
+    width: 330px;
+    height: 36px;
+    font-size: 18px;
+    line-height: 22.5px;
+  }
+  .short-data .short-sinopse {
+    margin-top: 30px;
+    width: 600px;
+    font-size: 18px;
+    line-height: 22.5px;
+    padding: 52px 28px;
+  }
+}
+
+@media (max-width: 910px) {
+  .short-data .short-poster {
+    width: 186px;
+    height: 268px;
+  }
+  .short-data .short-title {
+    width: 220px;
+    height: 24px;
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .short-data .short-sinopse {
+    margin-top: 30px;
+    width: 480px;
+    font-size: 12px;
+    line-height: 15px;
+    padding: 52px 28px;
+  }
+}
+
+@media (max-width: 700px) {
+  .short-data {
+    flex-flow: column;
+    align-items: center;
+  }
+  .wrapper-data {
+    margin-top: 30px;
+  }
+  .short-data .short-sinopse {
+    margin-top: 15px;
+    width: 450px;
+    padding: 26px 14px;
+  }
+}
+
+@media (max-width: 460px) {
+  .short-data .short-sinopse {
+    margin-top: 15px;
+    width: 320px;
+  }
+} ;
