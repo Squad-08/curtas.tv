@@ -1,18 +1,8 @@
-import React from 'react';
-import './styles.css';
+import React from "react";
+import ContentPageNotFound from "../../components/ContentPageNotFound";
 
 const PaginaInexistente = () => {
-    return (
-        <>
-            <div className="area-principal">
-                <div className="area-destaque">
-                    <h1 className="texto">
-                        Página Inexistente
-                    </h1>
-                </div>
-            </div>
-        </>
-    );
-}
+  return <ContentPageNotFound />;
+};
 
 export default PaginaInexistente;
