@@ -14,3 +14,14 @@
   padding: 9px 0px;
   line-height: 30px;
 }
+
+.short-data .short-sinopse {
+  display: inline-block;
+  width: 832px;
+  background-color: var(--color-black-second);
+  color: var(--color-third);
+  font-size: 24px;
+  border: 1px solid var(--color-first);
+  line-height: 30px;
+  padding: 52px 28px;
+}
