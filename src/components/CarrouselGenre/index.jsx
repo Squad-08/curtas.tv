@@ -20,7 +20,7 @@ const CarrouselGenre = (props) => {
 
     return (
         <section className="short-genre">
-            <GenreTitle />
+            <GenreTitle tituloGenero={props.tituloGenero}/>
             <div className="carroussel-genre">
                 <ButtonArrowLeft />
                 {generos}

@@ -28,14 +28,17 @@ class PaginaInicial extends Component {
         titleCarrossel: "Here Is The Plan"
       }
     ],
-    itemsGeneros: [
-      {
-        id: "1",
-        src: "https://m.media-amazon.com/images/M/MV5BZDMxNjhiZmYtY2YyMC00NWFkLWI0ZWEtYmJkZThhMjlhYWE1XkEyXkFqcGdeQXVyMjUxMTY3ODM@._V1_UY268_CR43,0,182,268_AL_.jpg",
-        alt: "Poster Sweet Tooth",
-        tituloGenero: "Sweet Tooth"
-      }
-    ]
+    generos: {
+      tituloGenero: "Gênero dos Curtas",
+      itemsGeneros: [
+        {
+          id: "1",
+          src: "https://m.media-amazon.com/images/M/MV5BZDMxNjhiZmYtY2YyMC00NWFkLWI0ZWEtYmJkZThhMjlhYWE1XkEyXkFqcGdeQXVyMjUxMTY3ODM@._V1_UY268_CR43,0,182,268_AL_.jpg",
+          alt: "Poster Sweet Tooth",
+          tituloGenero: "Sweet Tooth"
+        }
+      ]
+    }
   }
 
   listarFilmes() {
@@ -54,7 +57,7 @@ class PaginaInicial extends Component {
     return (
       <>
         <MainCarroussel items={this.state.items} />
-        <CarrouselGenre items={this.state.itemsGeneros} />
+        <CarrouselGenre tituloGenero={this.state.generos.tituloGenero} items={this.state.generos.itemsGeneros} />
       </>
     );
   }
