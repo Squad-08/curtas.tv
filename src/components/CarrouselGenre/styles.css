@@ -17,3 +17,7 @@
   width: 100%;
   justify-content: space-around;
 }
+
+.carroussel-elements {
+  display: flex;
+}
