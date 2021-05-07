@@ -3,11 +3,11 @@ import './styles.css';
 import ShortThumbnailCarroussel from '../ShortThumbnailCarroussel';
 import ShortTitleCarroussel from '../ShortTitleCarroussel';
 
-const WrapperThumbnail = () => {
+const WrapperThumbnail = (props) => {
     return (
         <div className="wrapper-thumbnail">
-            <ShortThumbnailCarroussel />
-            <ShortTitleCarroussel />
+            <ShortThumbnailCarroussel src={props.src} alt={props.alt} key={props.key} />
+            <ShortTitleCarroussel titleCarrossel={props.titleCarrossel} key={props.key}/>
         </div>
     )
 }

@@ -1,10 +1,9 @@
 import React from 'react';
 import './styles.css';
-import shortThumbnail1 from './img/shortThumbnail1.png'
 
-const ShortThumbnailCarroussel = () => {
+const ShortThumbnailCarroussel = (props) => {
     return (
-        <img className="short-thumbnail-carroussel"src={shortThumbnail1} alt="Thumbnail do Curta"/>
+        <img className="short-thumbnail-carroussel" src={props.src} alt={props.alt}  key={props.key}/>
     )
 }
 
