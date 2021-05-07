@@ -7,11 +7,11 @@
 .short-embed {
   background: var(--color-black-second);
   border: 1px solid var(--color-first);
-  width: 930px;
-  height: 540px;
+  width: 1023px;
+  height: 594px;
 }
 .embed-iframe {
   position: absolute;
-  width: 930px;
-  height: 540px;
+  width: 1023px;
+  height: 594px;
 }
