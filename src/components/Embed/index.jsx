@@ -9,11 +9,13 @@ const Embed = (props) => {
     }
 
     return (
-        <div className="short-embed">
-            <iframe className="embed-iframe"
-                src={props.src ? retornaURLDoEmbed(props.src) : ''}
-                title={props.title ? props.title : 'Não definido'} />
-        </div>
+        <section className="short-video">
+            <div className="short-embed">
+                <iframe className="embed-iframe"
+                    src={props.src ? retornaURLDoEmbed(props.src) : ''}
+                    title={props.title ? props.title : 'Não definido'} />
+            </div>
+        </section>
     );
 }
 
