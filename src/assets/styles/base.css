@@ -11,3 +11,12 @@ body {
   background-color: var(--color-black-first);
   font-family: "Krona One", sans-serif;
 }
+
+.complete-page {
+  position: relative;
+  min-height: 100vh;
+}
+
+.wrapper-content {
+  padding-bottom: 150px;
+}
