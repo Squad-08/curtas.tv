@@ -21,6 +21,7 @@
   text-align: right;
   font-size: 10px;
   line-height: 12.5px;
+  color: var(--color-third);
 }
 
 @media (max-width: 460px) {

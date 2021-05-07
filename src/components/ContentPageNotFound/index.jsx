@@ -10,7 +10,7 @@ const ContentPageNotFound = () => {
                     Uhm... O que você está procurando?
                 </h1>
                 <p className="message">
-                    Infelizmente, o que você estava procurando não estava por aqui.
+                    Infelizmente, o que você estava procurando não está por aqui.
                     Volte a nossa home para encontrar um conteúdo que possa-lhe interessar. 
                 </p>
             </div>
