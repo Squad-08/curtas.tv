@@ -2,16 +2,19 @@ import React from 'react';
 import './styles.css';
 
 
-const Embed = (embedId) => {
+const Embed = (props) => {
+
+    const retornaURLDoEmbed = (url) => {
+        return url.replace("watch?v=", "embed/");
+    }
+
     return (
-        <div className="embed">
+        <div className="short-embed">
             <iframe className="embed-iframe"
-                src={`https://www.youtube.com/embed/zpOULjyy-n8?rel=0${embedId}`}
-                title="Embedded youtube"
-            />
+                src={props.src ? retornaURLDoEmbed(props.src) : ''}
+                title={props.title ? props.title : 'Não definido'} />
         </div>
     );
 }
 
 export default Embed;
-

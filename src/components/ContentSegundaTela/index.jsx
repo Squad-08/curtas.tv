@@ -1,4 +1,5 @@
 import React from 'react';
+import Embed from '../Embed';
 import './styles.css';
 
 const ContentSegundaTela = () => {
@@ -16,7 +17,7 @@ const ContentSegundaTela = () => {
                 </p>
             </div>
         </section>
-    );
+);
 }
 
 export default ContentSegundaTela

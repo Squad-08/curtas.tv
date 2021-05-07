@@ -1,48 +1,4 @@
-
-.embed {
-    position: relative;
-    width: 75%;
-    padding-bottom: 40%;
-    background: var(--color-black-second);
-    border: 1px solid var(--color-first);
-    margin-left: 80px;
-    margin-right: 800px;
-    margin-top: -150px; 
-    
-
+.short-embed {
 }
-
 .embed-iframe {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
-    
-    
-
 }
-
-
-/*  como estava antes, to com medo de apagar rs
-.embed{
-    position: relative;
-    width: 90%;
-    height: 260px;
-    left: 80px;
-    margin-top: 26px;
-    bottom: 200px;
-    background: var(--color-black-second);
-    border: 1px solid var(--color-first);
-    box-sizing: border-box;
-}
-
-.embed-iframe {
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
-    background-repeat: no-repeat; 
-    background-size: cover; 
-}
-
-*/
-

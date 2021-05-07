@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as asctionsFilme from '../../core/actions/actionsFilme';
-//import ScriptEmbedJS from '../../assets/js/embed';
-//import Embed from '../../components/Embed';
 import ContentSegundaTela from '../../components/ContentSegundaTela';
-import Embed from '../../components/Embed';
 
 class Filme extends Component {
 
