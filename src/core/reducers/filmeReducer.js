@@ -5,7 +5,7 @@ const filmeReducer = (state = {}, action) => {
         case BUSCAR_FILME:
             return {
                 ...state,
-                filme: action.payload.filme,
+                filme: action.payload,
             }
         case LISTAR_FILMES:
             return {

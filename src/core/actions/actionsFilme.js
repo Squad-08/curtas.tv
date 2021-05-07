@@ -3,25 +3,26 @@ import { api } from '../config/api';
 import { LISTAR_FILMES, BUSCAR_FILME } from './types';
 import erros from './erroHandler';
 
- export const buscarFilme = (id) => {
-     return (dispatch) => {
-         axios.get(`${api}/filmes/${id}`)
-             .then((response) => {
-                 dispatch({ type: BUSCAR_FILME, payload: response.data });
-             })
-             .catch(erros());
-     }
- }
+export const buscarFilme = (id) => {
+    return (dispatch) => {
+        axios.get(`${api}/movie/${id}`)
+            .then((response) => {
+                console.log(response)
+                dispatch({ type: BUSCAR_FILME, payload: response.data });
+            })
+        // .catch(erros());
+    }
+}
 
- export const listarFilmes = () => {
-     return (dispatch) => {
-         axios.get(`${api}/filmes`)
-             .then((response) => {
-                 dispatch({ type: LISTAR_FILMES, payload: response.data });
-             })
-             .catch(erros());
-     }
- }
+export const listarFilmes = () => {
+    return (dispatch) => {
+        axios.get(`${api}/filmes`)
+            .then((response) => {
+                dispatch({ type: LISTAR_FILMES, payload: response.data });
+            })
+            .catch(erros());
+    }
+}
 
 
 export const testeAPI = ({ email, senha }, callback) => {

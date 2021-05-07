@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Embed from '../Embed';
 import './styles.css';
 
-const ContentSegundaTela = () => {
+const ContentSegundaTela = (props) => {
+    const [filme, setFilme] = useState({ ...props.sinopse.filme })
+    console.log(filme)
     return (
         <>
             <section className="short-data">
@@ -14,13 +16,13 @@ const ContentSegundaTela = () => {
                         Quidem hic explicabo at, tempora consectetur,
                         quisquam consequuntur quaerat odio
                         similique alias iusto modi
-                        quae voluptatibus molestiae.
+                        quae voluptatibus molestiae
                     </p>
                 </div>
             </section>
             <Embed />
         </>
-);
+    );
 }
 
 export default ContentSegundaTela
