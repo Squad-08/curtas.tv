@@ -39,15 +39,15 @@ class PaginaInicial extends Component {
   }
 
   listarDestaques() {
-    this.setState({aguarde:true});
+    this.setState({ aguarde: true });
     this.props.listarDestaques();
-    this.setState({aguarde:false});
+    this.setState({ aguarde: false });
   }
 
   listarGeneros(genero, quantidade) {
-    this.setState({aguarde:true});
+    this.setState({ aguarde: true });
     this.props.listarGeneros(genero, quantidade);
-    this.setState({aguarde:true});
+    this.setState({ aguarde: false });
   }
 
   componentDidMount() {
@@ -61,15 +61,18 @@ class PaginaInicial extends Component {
   }
 
   render() {
-    console.log('renderizando...');
+    console.log('renderizando..s.');
     console.log(this.props.generos);
 
     var destaques = [];
     if (this.props.destaques) destaques = [...this.props.destaques];
 
+    if (this.state.aguarde) {
+      return <ModalCarregando isOpen={this.state.aguarde} />
+    }
+
     return (
       <>
-        <ModalCarregando isOpen={this.state.aguarde} />
         <MainCarroussel items={destaques} />
         <CarrouselGenre tituloGenero={this.state.generos.tituloGenero} items={this.state.generos.itemsGeneros} />
       </>
