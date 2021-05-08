@@ -26,7 +26,7 @@ class PaginaInicial extends Component {
       }
     ],
     generos: {
-      tituloGenero: "Ação",
+      tituloGenero: "Drama",
       itemsGeneros: [
         {
           id: "263fc922-b665-4bbf-9f26-0250d65c24ef",
@@ -62,26 +62,30 @@ class PaginaInicial extends Component {
 
   render() {
     console.log('renderizando..s.');
-    console.log(this.props.generos);
-
+    
     var destaques = [];
     if (this.props.destaques) destaques = [...this.props.destaques];
+    
+    var itensGenero1 = [];
+    if (this.props.generos) itensGenero1 = [...this.props.generos];
+    console.log(itensGenero1);
 
     if (this.state.aguarde) {
-      return <ModalCarregando isOpen={this.state.aguarde} />
+      return <ModalCarregando isOpen={itensGenero1} />
     }
 
     return (
       <>
         <MainCarroussel items={destaques} />
-        <CarrouselGenre tituloGenero={this.state.generos.tituloGenero} items={this.state.generos.itemsGeneros} />
+        <CarrouselGenre tituloGenero={this.state.generos.tituloGenero} items={itensGenero1} />
       </>
     );
   }
 }
 
 const mapStateToProps = state => ({
-  destaques: state.filme.destaques
+  destaques: state.filme.destaques,
+  generos: state.filme.generos
 });
 
 export default connect(mapStateToProps, actionsFilmes)(PaginaInicial);
