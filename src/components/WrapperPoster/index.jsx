@@ -4,12 +4,14 @@ import './styles.css'
 
 const WrapperPoster = (props) => {
     return (
-        <figure className="wrapper-poster">
+        <>
             <Link to={`/filme/${props.id}`}>
-                <img src={props.src} alt={props.alt} className="short-poster" />
+                <figure className="wrapper-poster">
+                    <img src={props.src} alt={props.alt} className="short-poster" />
+                    <figcaption className="short-title">{props.titleCarrossel}</figcaption>
+                </figure>
             </Link>
-            <figcaption className="short-title">{props.tituloGenero}</figcaption>
-        </figure>
+        </>
     )
 }
 

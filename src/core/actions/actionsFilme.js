@@ -1,40 +1,40 @@
 import axios from 'axios';
 import { api } from '../config/api';
-import { LISTAR_FILMES, BUSCAR_FILME } from './types';
+import { DESTAQUES, GENEROS, BUSCAR_CURTA,LIMPAR_CURTA } from './types';
 import erros from './erroHandler';
 
- export const buscarFilme = (id) => {
-     return (dispatch) => {
-         axios.get(`${api}/filmes/${id}`)
-             .then((response) => {
-                 dispatch({ type: BUSCAR_FILME, payload: response.data });
-             })
-             .catch(erros());
-     }
- }
-
- export const listarFilmes = () => {
-     return (dispatch) => {
-         axios.get(`${api}/filmes`)
-             .then((response) => {
-                 dispatch({ type: LISTAR_FILMES, payload: response.data });
-             })
-             .catch(erros());
-     }
- }
-
-
-export const testeAPI = ({ email, senha }, callback) => {
+export const buscarCurta = (id) => {
     return (dispatch) => {
-        console.log('Actions teste api...');
-        axios.post(`http://localhost:8081/usuarios/login`, { email, senha })
+        axios.get(`${api}/movie/${id}`)
             .then((response) => {
+                console.log('Conectado na API');
                 console.log(response.data);
-                //dispatch({ type: LOGIN_USUARIO, payload: response.data })
-            })
-            .catch((err) => {
-                //callback(errorHandler(err));
-                console.log(err);
-            });
+                dispatch({ type: BUSCAR_CURTA, payload: response.data });
+            }).catch((err) => erros(err));
+    }
+}
+
+export const listarDestaques = (quantidade) => {
+    return (dispatch) => {
+        axios.get(`${api}/movies/destaques?limitOf=${quantidade ? quantidade : 4}`)
+            .then((response) => {
+                dispatch({ type: DESTAQUES, payload: response.data });
+            }).catch((err) => erros(err));
+    }
+}
+
+export const listarGeneros = (genero, quantidade) => {
+    return (dispatch) => {
+        axios.get(`${api}/movies/${genero}?limitOf=${quantidade ? quantidade : 6}`)
+            .then((response) => {
+                dispatch({ type: GENEROS, payload: response.data });
+            }).catch((err) => erros(err));
+    }
+}
+
+
+export const limparCurta = () => {
+    return (dispatch) => {
+        dispatch({ type: LIMPAR_CURTA });
     }
 }

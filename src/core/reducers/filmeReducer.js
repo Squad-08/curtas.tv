@@ -1,16 +1,26 @@
-import { BUSCAR_FILME, LISTAR_FILMES } from '../actions/types';
+import { BUSCAR_CURTA, DESTAQUES, GENEROS, LIMPAR_CURTA } from '../actions/types';
 
 const filmeReducer = (state = {}, action) => {
     switch (action.type) {
-        case BUSCAR_FILME:
+        case BUSCAR_CURTA:
             return {
                 ...state,
-                filme: action.payload.filme,
+                curta: action.payload,
             }
-        case LISTAR_FILMES:
+        case DESTAQUES:
             return {
                 ...state,
-                filmes: action.payload.filmes,
+                destaques: action.payload,
+            }
+        case GENEROS:
+            return {
+                ...state,
+                generos: action.payload,
+            }
+        case LIMPAR_CURTA:
+            return {
+                ...state,
+                curta: null,
             }
         default:
             return state;
