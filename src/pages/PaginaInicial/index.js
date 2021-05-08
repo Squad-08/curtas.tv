@@ -8,23 +8,6 @@ import ModalCarregando from '../../components/ModalCarregando';
 class PaginaInicial extends Component {
 
   state = {
-    testeDestaques: [
-      {
-        id: "263fc922-b665-4bbf-9f26-0250d65c24ef",
-        title: "Lost & Found",
-        thumbnailUrl: "https://m.media-amazon.com/images/M/MV5BMzAxMzVmNWYtNzc4Yi00YWUxLTlkYWUtYWEyYzQ1YWFjYmVjXkEyXkFqcGdeQXVyNTkxMDU1Njg@._V1_.jpg"
-      },
-      {
-        id: "6758c8f8-6d77-479e-a8f0-d99925059c8a",
-        title: "Kitbull",
-        thumbnailUrl: "https://m.media-amazon.com/images/M/MV5BNTQ1NTc3NjctNDA0ZC00NzcyLTljY2YtYjZmYzE3YTY4NTA0XkEyXkFqcGdeQXVyNjgwNDU3NTA@._V1_FMjpg_UX1000_.jpg"
-      },
-      {
-        id: "7d8834e0-e6d5-41b2-a222-c3895d7e2764",
-        title: "Chateau de Sable (Sand Castle)",
-        thumbnailUrl: "https://m.media-amazon.com/images/M/MV5BZjdiYjAwMTAtODg4ZS00NmM1LWJjYjMtODAxODhkZThjYmZkXkEyXkFqcGdeQXVyNTk3NTY4NjI@._V1_FMjpg_UX1000_.jpg"
-      }
-    ],
     generos: {
       tituloGenero: "Drama",
       itemsGeneros: [
@@ -35,6 +18,42 @@ class PaginaInicial extends Component {
         }
       ]
     },
+    //Primeiro gennero
+    generos1: {
+      tituloGenero: "Drama",
+      quantidade: 3,
+    },
+    itemsGeneros1: [
+      {
+        id: null,
+        title: null,
+        posterUrl: null,
+      }
+    ],
+    //Segundo gennero
+    generos2: {
+      tituloGenero: "Fantasia",
+      quantidade: 4,
+    },
+    itemsGeneros2: [
+      {
+        id: null,
+        title: null,
+        posterUrl: null,
+      }
+    ],
+    //Terceiro gennero
+    generos3: {
+      tituloGenero: "Ficção Científica",
+      quantidade: 5,
+    },
+    itemsGeneros3: [
+      {
+        id: null,
+        title: null,
+        posterUrl: null,
+      }
+    ],
     aguarde: false
   }
 
@@ -44,40 +63,46 @@ class PaginaInicial extends Component {
     this.setState({ aguarde: false });
   }
 
-  listarGeneros(genero, quantidade) {
+  listarGeneros() {
     this.setState({ aguarde: true });
-    this.props.listarGeneros(genero, quantidade);
+    const { generos } = this.props;
+    //Buscando primeiro gennero
+    this.props.listarGeneros(this.state.generos1.tituloGenero, this.state.generos1.quantidade);
+    this.setState({ itemsGeneros1: [...generos] });
+    // //Buscando segundo gennero
+    // this.props.listarGeneros(this.state.generos2.tituloGenero, this.state.generos2.quantidade);
+    // this.setState({ itemsGeneros2: [...generos] });
+    // //Buscando terceira gennero
+    // this.props.listarGeneros(this.state.generos3.tituloGenero, this.state.generos3.quantidade);
+    // this.setState({ itemsGeneros3: [...generos] });
     this.setState({ aguarde: false });
   }
 
   componentDidMount() {
     this.listarDestaques();
-    this.listarGeneros(this.state.generos.tituloGenero, 3);
+    this.listarGeneros();
   }
 
   componentDidUpdate(nextProps) {
     (!this.props.destaques && nextProps.destaques) && this.listarDestaques();
-    (!this.props.generos && nextProps.generos) && this.listarGeneros(this.state.generos.tituloGenero, 3);
+    (!this.props.generos && nextProps.generos) && this.listarGeneros();
   }
 
   render() {
-    console.log('renderizando..s.');
-    
+    console.log('renderizando...');
+    console.log(this.state.itemsGeneros1);
+
     var destaques = [];
     if (this.props.destaques) destaques = [...this.props.destaques];
-    
-    var itensGenero1 = [];
-    if (this.props.generos) itensGenero1 = [...this.props.generos];
-    console.log(itensGenero1);
 
     if (this.state.aguarde) {
-      return <ModalCarregando isOpen={itensGenero1} />
+      return <ModalCarregando isOpen={this.state.aguarde} />
     }
 
     return (
       <>
         <MainCarroussel items={destaques} />
-        <CarrouselGenre tituloGenero={this.state.generos.tituloGenero} items={itensGenero1} />
+        <CarrouselGenre tituloGenero={this.state.generos1.tituloGenero} items={this.state.itemsGeneros1} />
       </>
     );
   }
