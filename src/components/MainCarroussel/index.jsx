@@ -39,7 +39,7 @@ const MainCarroussel = (props) => {
         onExited={() => setAnimating(false)}
         key={item.id}>
         <div className="carroussel-position">
-          <WrapperThumbnail src={item.thumbnailUrl} alt={item.id} titleCarrossel={item.title} />
+          <WrapperThumbnail src={item.thumbnailUrl} alt={item.id} titleCarrossel={item.title} id={item.id}/>
         </div>
       </CarouselItem>
     );
