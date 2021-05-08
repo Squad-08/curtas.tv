@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { api } from '../config/api';
-import { LISTAR_FILMES, BUSCAR_FILME } from './types';
+import { DESTAQUES, GENEROS, BUSCAR_FILME } from './types';
 import erros from './erroHandler';
 
 export const buscarFilme = (id) => {
@@ -14,13 +14,21 @@ export const buscarFilme = (id) => {
     }
 }
 
-export const listarFilmes = () => {
+export const listarDestaques = () => {
     return (dispatch) => {
-        axios.get(`${api}/filmes`)
+        axios.get(`${api}/movies/destaques`)
             .then((response) => {
-                dispatch({ type: LISTAR_FILMES, payload: response.data });
-            })
-            .catch(erros());
+                dispatch({ type: DESTAQUES, payload: response.data });
+            }).catch((err) => erros(err));
+    }
+}
+
+export const listarGeneros = (genero, quantidade) => {
+    return (dispatch) => {
+        axios.get(`${api}/movies/${genero}Of=${quantidade ? quantidade : 6}`)
+            .then((response) => {
+                dispatch({ type: GENEROS, payload: response.data });
+            }).catch((err) => erros(err));
     }
 }
 

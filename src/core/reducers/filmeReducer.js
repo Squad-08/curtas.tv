@@ -1,4 +1,4 @@
-import { BUSCAR_FILME, LISTAR_FILMES } from '../actions/types';
+import { BUSCAR_FILME, DESTAQUES, GENEROS } from '../actions/types';
 
 const filmeReducer = (state = {}, action) => {
     switch (action.type) {
@@ -7,10 +7,15 @@ const filmeReducer = (state = {}, action) => {
                 ...state,
                 filme: action.payload,
             }
-        case LISTAR_FILMES:
+        case DESTAQUES:
             return {
                 ...state,
-                filmes: action.payload.filmes,
+                destaques: action.payload,
+            }
+        case GENEROS:
+            return {
+                ...state,
+                generos: action.payload,
             }
         default:
             return state;
