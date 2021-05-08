@@ -10,7 +10,7 @@ import WrapperThumbnail from '../WrapperThumbnail';
 
 
 const MainCarroussel = (props) => {
-  const [items, setIttems] = useState([...props.items]);
+  const items = [...props.items];
 
   const [activeIndex, setActiveIndex] = useState(0);
   const [animating, setAnimating] = useState(false);
@@ -37,9 +37,9 @@ const MainCarroussel = (props) => {
       <CarouselItem
         onExiting={() => setAnimating(true)}
         onExited={() => setAnimating(false)}
-        key={item.key}>
+        key={item.id}>
         <div className="carroussel-position">
-          <WrapperThumbnail src={item.src} alt={item.alt}  titleCarrossel={item.titleCarrossel} />
+          <WrapperThumbnail src={item.thumbnailUrl} alt={item.id} titleCarrossel={item.title} id={item.id}/>
         </div>
       </CarouselItem>
     );
