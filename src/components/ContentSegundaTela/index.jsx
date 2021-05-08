@@ -1,8 +1,11 @@
-import React, { useState } from 'react';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import * as actionsFilme from '../../core/actions/actionsFilme';
 import Embed from '../Embed';
 import './styles.css';
 
 const ContentSegundaTela = (props) => {
+
     return (
         <>
             <section className="short-data">
@@ -19,4 +22,4 @@ const ContentSegundaTela = (props) => {
     );
 }
 
-export default ContentSegundaTela
+export default ContentSegundaTela;

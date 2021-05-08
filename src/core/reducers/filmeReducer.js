@@ -1,11 +1,11 @@
-import { BUSCAR_FILME, DESTAQUES, GENEROS } from '../actions/types';
+import { BUSCAR_CURTA, DESTAQUES, GENEROS, LIMPAR_CURTA } from '../actions/types';
 
 const filmeReducer = (state = {}, action) => {
     switch (action.type) {
-        case BUSCAR_FILME:
+        case BUSCAR_CURTA:
             return {
                 ...state,
-                filme: action.payload,
+                curta: action.payload,
             }
         case DESTAQUES:
             return {
@@ -16,6 +16,11 @@ const filmeReducer = (state = {}, action) => {
             return {
                 ...state,
                 generos: action.payload,
+            }
+        case LIMPAR_CURTA:
+            return {
+                ...state,
+                curta: null,
             }
         default:
             return state;

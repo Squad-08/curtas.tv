@@ -3,6 +3,7 @@ import CarrouselGenre from "../../components/CarrouselGenre";
 import MainCarroussel from "../../components/MainCarroussel";
 import { connect } from "react-redux";
 import * as actionsFilmes from "../../core/actions/actionsFilme";
+import ModalCarregando from '../../components/ModalCarregando';
 
 class PaginaInicial extends Component {
 
@@ -33,15 +34,20 @@ class PaginaInicial extends Component {
           posterUrl: "https://m.media-amazon.com/images/M/MV5BZDMxNjhiZmYtY2YyMC00NWFkLWI0ZWEtYmJkZThhMjlhYWE1XkEyXkFqcGdeQXVyMjUxMTY3ODM@._V1_UY268_CR43,0,182,268_AL_.jpg",
         }
       ]
-    }
+    },
+    aguarde: false
   }
 
   listarDestaques() {
+    this.setState({aguarde:true});
     this.props.listarDestaques();
+    this.setState({aguarde:false});
   }
 
   listarGeneros(genero, quantidade) {
+    this.setState({aguarde:true});
     this.props.listarGeneros(genero, quantidade);
+    this.setState({aguarde:true});
   }
 
   componentDidMount() {
@@ -63,6 +69,7 @@ class PaginaInicial extends Component {
 
     return (
       <>
+        <ModalCarregando isOpen={this.state.aguarde} />
         <MainCarroussel items={destaques} />
         <CarrouselGenre tituloGenero={this.state.generos.tituloGenero} items={this.state.generos.itemsGeneros} />
       </>

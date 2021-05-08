@@ -1,21 +1,22 @@
 import axios from 'axios';
 import { api } from '../config/api';
-import { DESTAQUES, GENEROS, BUSCAR_FILME } from './types';
+import { DESTAQUES, GENEROS, BUSCAR_CURTA,LIMPAR_CURTA } from './types';
 import erros from './erroHandler';
 
-export const buscarFilme = (id) => {
+export const buscarCurta = (id) => {
     return (dispatch) => {
         axios.get(`${api}/movie/${id}`)
             .then((response) => {
-                dispatch({ type: BUSCAR_FILME, payload: response.data });
-            })
-        // .catch(erros());
+                console.log('Conectado na API');
+                console.log(response.data);
+                dispatch({ type: BUSCAR_CURTA, payload: response.data });
+            }).catch((err) => erros(err));
     }
 }
 
-export const listarDestaques = () => {
+export const listarDestaques = (quantidade) => {
     return (dispatch) => {
-        axios.get(`${api}/movies/destaques`)
+        axios.get(`${api}/movies/destaques?limitOf=${quantidade ? quantidade : 4}`)
             .then((response) => {
                 dispatch({ type: DESTAQUES, payload: response.data });
             }).catch((err) => erros(err));
@@ -26,25 +27,14 @@ export const listarGeneros = (genero, quantidade) => {
     return (dispatch) => {
         axios.get(`${api}/movies/${genero}?limitOf=${quantidade ? quantidade : 6}`)
             .then((response) => {
-                console.log('conectando API');
-                console.log(response.data);
                 dispatch({ type: GENEROS, payload: response.data });
             }).catch((err) => erros(err));
     }
 }
 
 
-export const testeAPI = ({ email, senha }, callback) => {
+export const limparCurta = () => {
     return (dispatch) => {
-        console.log('Actions teste api...');
-        axios.post(`http://localhost:8081/usuarios/login`, { email, senha })
-            .then((response) => {
-                console.log(response.data);
-                //dispatch({ type: LOGIN_USUARIO, payload: response.data })
-            })
-            .catch((err) => {
-                //callback(errorHandler(err));
-                console.log(err);
-            });
+        dispatch({ type: LIMPAR_CURTA });
     }
 }
