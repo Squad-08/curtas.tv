@@ -8,7 +8,7 @@ const WrapperPoster = (props) => {
             <Link to={`/filme/${props.id}`}>
                 <figure className="wrapper-poster">
                     <img src={props.src} alt={props.alt} className="short-poster" />
-                    <figcaption className="short-title">{props.titleCarrossel}</figcaption>
+                    <figcaption className="short-title">{props.title}</figcaption>
                 </figure>
             </Link>
         </>

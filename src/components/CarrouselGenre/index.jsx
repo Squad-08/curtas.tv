@@ -12,7 +12,7 @@ const CarrouselGenre = (props) => {
 
     const generos = items.map((item) => {
         return (
-            <WrapperPoster id={item.id} src={item.posterUrl} alt={item.alt} titleCarrossel={item.titleCarrossel} />
+            <WrapperPoster id={item.id} src={item.posterUrl} alt={item.id} title={item.title} />
         );
     });
 
