@@ -7,7 +7,6 @@ export const buscarFilme = (id) => {
     return (dispatch) => {
         axios.get(`${api}/movie/${id}`)
             .then((response) => {
-                console.log(response)
                 dispatch({ type: BUSCAR_FILME, payload: response.data });
             })
         // .catch(erros());
@@ -25,8 +24,10 @@ export const listarDestaques = () => {
 
 export const listarGeneros = (genero, quantidade) => {
     return (dispatch) => {
-        axios.get(`${api}/movies/${genero}Of=${quantidade ? quantidade : 6}`)
+        axios.get(`${api}/movies/${genero}?limitOf=${quantidade ? quantidade : 6}`)
             .then((response) => {
+                console.log('conectando API');
+                console.log(response.data);
                 dispatch({ type: GENEROS, payload: response.data });
             }).catch((err) => erros(err));
     }

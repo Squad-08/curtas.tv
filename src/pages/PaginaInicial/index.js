@@ -41,7 +41,7 @@ class PaginaInicial extends Component {
   }
 
   listarGeneros(genero, quantidade) {
-    this.props.listarDestaques(genero, quantidade);
+    this.props.listarGeneros(genero, quantidade);
   }
 
   componentDidMount() {
@@ -55,7 +55,7 @@ class PaginaInicial extends Component {
   }
 
   render() {
-    console.log('renderizou');
+    console.log('renderizando...');
     console.log(this.props.generos);
 
     var destaques = [];
