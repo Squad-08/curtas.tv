@@ -1,6 +1,4 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import * as actionsFilme from '../../core/actions/actionsFilme';
+import React from 'react';
 import Embed from '../Embed';
 import './styles.css';
 
