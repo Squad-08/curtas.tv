@@ -15,5 +15,11 @@
 .carroussel-items {
   display: flex;
   width: 100%;
-  justify-content: space-around;
+  justify-content: space-between;
+  overflow-x: scroll;
+}
+
+.carroussel-elements {
+  display: flex;
+  padding: 0px 0px 25px;
 }
