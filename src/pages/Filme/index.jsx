@@ -27,6 +27,8 @@ class Filme extends Component {
 
     componentWillUnmount() {
         this.props.limparCurta();
+        this.props.limparDestaques();
+        this.props.limparGeneros();
     }
 
     render() {

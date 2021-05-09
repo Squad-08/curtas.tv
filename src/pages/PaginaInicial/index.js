@@ -51,6 +51,11 @@ class PaginaInicial extends Component {
     (!this.props.generos && nextProps.generos) && this.listarGeneros();
   }
 
+  componentWillUnmount() {
+    this.props.limparDestaques();
+    this.props.limparGeneros();
+  }
+
   render() {
     var destaques = [];
     if (this.props.destaques) destaques = [...this.props.destaques];
@@ -68,16 +73,16 @@ class PaginaInicial extends Component {
       return <ModalCarregando isOpen={this.state.aguarde} />
     }
 
-    if (destaques.length === 0 && generos1.length === 0 && generos2.length === 0 && generos3.length === 0) {
+    if (destaques.length === 0 && generos1.length === 0 && generos2.length === 0 && generos3.length === 0 && !this.state.aguarde) {
       return (<Redirect to="/pagina-inexistente" />);
     }
 
     return (
       <>
-        <MainCarroussel items={destaques} />
-        <CarrouselGenre tituloGenero={this.state.generos1.tituloGenero} items={generos1} />
-        <CarrouselGenre tituloGenero={this.state.generos2.tituloGenero} items={generos2} />
-        <CarrouselGenre tituloGenero={this.state.generos3.tituloGenero} items={generos3} />
+        {!this.state.aguarde ? <MainCarroussel items={destaques} /> : ""}
+        {!this.state.aguarde ? <CarrouselGenre tituloGenero={this.state.generos1.tituloGenero} items={generos1} /> : ""}
+        {!this.state.aguarde ? <CarrouselGenre tituloGenero={this.state.generos2.tituloGenero} items={generos2} /> : ""}
+        {!this.state.aguarde ? <CarrouselGenre tituloGenero={this.state.generos3.tituloGenero} items={generos3} />:""}
       </>
     );
   }

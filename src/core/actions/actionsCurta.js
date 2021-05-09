@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { api } from '../config/api';
-import { DESTAQUES, GENEROS1, GENEROS2, GENEROS3, BUSCAR_CURTA, LIMPAR_CURTA } from './types';
+import { DESTAQUES, GENEROS1, GENEROS2, GENEROS3, BUSCAR_CURTA, LIMPAR_CURTA, LIMPAR_DESTAQUES, LIMPAR_GENEROS, } from './types';
 import erros from './erroHandler';
 
 export const buscarCurta = (id) => {
@@ -51,5 +51,17 @@ export const listarGeneros3 = (genero, quantidade) => {
 export const limparCurta = () => {
     return (dispatch) => {
         dispatch({ type: LIMPAR_CURTA });
+    }
+}
+
+export const limparDestaques = () => {
+    return (dispatch) => {
+        dispatch({ type: LIMPAR_DESTAQUES });
+    }
+}
+
+export const limparGeneros = () => {
+    return (dispatch) => {
+        dispatch({ type: LIMPAR_GENEROS });
     }
 }
