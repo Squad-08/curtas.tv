@@ -30,7 +30,6 @@ class PaginaInicial extends Component {
   listarDestaques() {
     this.props.listarDestaques(3, (erro) => {
       if (erro.status) {
-        console.log(erro);
         this.setState({ erro: true });
       }
     });
