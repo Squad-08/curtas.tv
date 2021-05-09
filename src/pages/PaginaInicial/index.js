@@ -3,7 +3,7 @@ import CarrouselGenre from "../../components/CarrouselGenre";
 import MainCarroussel from "../../components/MainCarroussel";
 import { connect } from "react-redux";
 import * as actionsCurta from "../../core/actions/actionsCurta";
-import ModalCarregando from '../../components/ModalCarregando';
+import Carregando from '../../components/Carregando';
 import { Redirect } from "react-router";
 
 class PaginaInicial extends Component {
@@ -28,17 +28,13 @@ class PaginaInicial extends Component {
   }
 
   listarDestaques() {
-    this.setState({ aguarde: true });
     this.props.listarDestaques();
-    this.setState({ aguarde: false });
   }
 
   listarGeneros() {
-    this.setState({ aguarde: true });
     this.props.listarGeneros1(this.state.generos1.tituloGenero, this.state.generos1.quantidade);
     this.props.listarGeneros2(this.state.generos2.tituloGenero, this.state.generos2.quantidade);
     this.props.listarGeneros3(this.state.generos3.tituloGenero, this.state.generos3.quantidade);
-    this.setState({ aguarde: false });
   }
 
   componentDidMount() {
@@ -48,15 +44,14 @@ class PaginaInicial extends Component {
 
   componentDidUpdate(nextProps) {
     (!this.props.destaques && nextProps.destaques) && this.listarDestaques();
-    (!this.props.generos && nextProps.generos) && this.listarGeneros();
+    ((!this.props.generos1 && nextProps.generos1) || (!this.props.generos2 && nextProps.generos2)) || (!this.props.generos3 && nextProps.generos3) && this.listarGeneros();
   }
 
   componentWillUnmount() {
     this.props.limparDestaques();
     this.props.limparGeneros();
   }
-
-  render() {
+  renderizaConteudo() {
     var destaques = [];
     if (this.props.destaques) destaques = [...this.props.destaques];
 
@@ -69,22 +64,22 @@ class PaginaInicial extends Component {
     var generos3 = [];
     if (this.props.generos3) generos3 = [...this.props.generos3];
 
-    if (this.state.aguarde) {
-      return <ModalCarregando isOpen={this.state.aguarde} />
-    }
-
-    if (destaques.length === 0 && generos1.length === 0 && generos2.length === 0 && generos3.length === 0 && !this.state.aguarde) {
-      return (<Redirect to="/pagina-inexistente" />);
-    }
-
     return (
       <>
-        {!this.state.aguarde ? <MainCarroussel items={destaques} /> : ""}
-        {!this.state.aguarde ? <CarrouselGenre tituloGenero={this.state.generos1.tituloGenero} items={generos1} /> : ""}
-        {!this.state.aguarde ? <CarrouselGenre tituloGenero={this.state.generos2.tituloGenero} items={generos2} /> : ""}
-        {!this.state.aguarde ? <CarrouselGenre tituloGenero={this.state.generos3.tituloGenero} items={generos3} />:""}
+        <MainCarroussel items={destaques} />
+        <CarrouselGenre tituloGenero={this.state.generos1.tituloGenero} items={generos1} />
+        <CarrouselGenre tituloGenero={this.state.generos2.tituloGenero} items={generos2} />
+        <CarrouselGenre tituloGenero={this.state.generos3.tituloGenero} items={generos3} />
       </>
-    );
+    )
+  }
+
+  render() {
+    return (
+      <>
+      {this.props.destaques && this.props.generos1 && this.props.generos2 && this.props.generos3 ? this.renderizaConteudo() : <Carregando isOpen={true} pagina="Curtas.Tv"/>}
+      </>
+    )
   }
 }
 
