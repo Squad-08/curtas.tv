@@ -3,12 +3,12 @@ import { api } from '../config/api';
 import { DESTAQUES, GENEROS1, GENEROS2, GENEROS3, BUSCAR_CURTA, LIMPAR_CURTA, LIMPAR_DESTAQUES, LIMPAR_GENEROS, } from './types';
 import erros from './erroHandler';
 
-export const buscarCurta = (id) => {
+export const buscarCurta = (id, callbeck) => {
     return (dispatch) => {
         axios.get(`${api}/movie/${id}`)
             .then((response) => {
                 dispatch({ type: BUSCAR_CURTA, payload: response.data });
-            }).catch((err) => erros(err));
+            }).catch((err) => callbeck(erros(err)));
     }
 }
 
@@ -21,7 +21,7 @@ export const listarDestaques = (quantidade, callbeck) => {
     }
 }
 
-export const listarGeneros1 = (genero, quantidade,callbeck) => {
+export const listarGeneros1 = (genero, quantidade, callbeck) => {
     return (dispatch) => {
         axios.get(`${api}/movies/${genero}?limitOf=${quantidade ? quantidade : 6}`)
             .then((response) => {

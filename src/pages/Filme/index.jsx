@@ -3,17 +3,21 @@ import { connect } from 'react-redux';
 import * as actionsCurta from '../../core/actions/actionsCurta';
 import ContentSegundaTela from '../../components/ContentSegundaTela';
 import Carregando from '../../components/Carregando';
+import { Redirect } from 'react-router';
 
 class Filme extends Component {
 
     state = {
-        aguarde: true
+        aguarde: true,
+        erro: false
     }
 
     buscarCurta() {
         const { id } = this.props.match.params;
         this.setState({ aguarde: true });
-        this.props.buscarCurta(id);
+        this.props.buscarCurta(id, (erro) => {
+            this.setState({ erro: true });
+        });
         this.setState({ aguarde: false });
     }
 
@@ -50,8 +54,10 @@ class Filme extends Component {
 
 
     render() {
+        console.log(this.state.erro);
         return (
             <>
+                {this.state.erro ? <Redirect to='/pagina-inexistente' /> : ""}
                 {this.props.curta ? this.renderizaConteudo() : <Carregando isOpen={true} pagina="Curta" />}
             </>
         );
