@@ -1,5 +1,13 @@
-.short-title-carroussel {
+.wrapper-short-title-carroussel {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
+  bottom: 24px;
+}
+
+.short-title-carroussel {
   width: 355px;
   height: 48px;
   line-height: 30px;
@@ -8,5 +16,4 @@
   font-size: 24px;
   text-align: center;
   padding: 9px 0px;
-  margin: -66px 426px 0px;
 }
