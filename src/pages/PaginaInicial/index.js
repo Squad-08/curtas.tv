@@ -2,58 +2,27 @@ import React, { Component } from "react";
 import CarrouselGenre from "../../components/CarrouselGenre";
 import MainCarroussel from "../../components/MainCarroussel";
 import { connect } from "react-redux";
-import * as actionsFilmes from "../../core/actions/actionsFilme";
+import * as actionsCurta from "../../core/actions/actionsCurta";
 import ModalCarregando from '../../components/ModalCarregando';
 
 class PaginaInicial extends Component {
 
   state = {
-    generos: {
-      tituloGenero: "Drama",
-      itemsGeneros: [
-        {
-          id: "263fc922-b665-4bbf-9f26-0250d65c24ef",
-          title: "Sweet Tooth",
-          posterUrl: "https://m.media-amazon.com/images/M/MV5BZDMxNjhiZmYtY2YyMC00NWFkLWI0ZWEtYmJkZThhMjlhYWE1XkEyXkFqcGdeQXVyMjUxMTY3ODM@._V1_UY268_CR43,0,182,268_AL_.jpg",
-        }
-      ]
-    },
     //Primeiro gennero
     generos1: {
       tituloGenero: "Drama",
       quantidade: 3,
     },
-    itemsGeneros1: [
-      {
-        id: null,
-        title: null,
-        posterUrl: null,
-      }
-    ],
     //Segundo gennero
     generos2: {
       tituloGenero: "Fantasia",
       quantidade: 4,
     },
-    itemsGeneros2: [
-      {
-        id: null,
-        title: null,
-        posterUrl: null,
-      }
-    ],
     //Terceiro gennero
     generos3: {
       tituloGenero: "Ficção Científica",
       quantidade: 5,
     },
-    itemsGeneros3: [
-      {
-        id: null,
-        title: null,
-        posterUrl: null,
-      }
-    ],
     aguarde: false
   }
 
@@ -65,16 +34,9 @@ class PaginaInicial extends Component {
 
   listarGeneros() {
     this.setState({ aguarde: true });
-    const { generos } = this.props;
-    //Buscando primeiro gennero
-    this.props.listarGeneros(this.state.generos1.tituloGenero, this.state.generos1.quantidade);
-    this.setState({ itemsGeneros1: [...generos] });
-    // //Buscando segundo gennero
-    // this.props.listarGeneros(this.state.generos2.tituloGenero, this.state.generos2.quantidade);
-    // this.setState({ itemsGeneros2: [...generos] });
-    // //Buscando terceira gennero
-    // this.props.listarGeneros(this.state.generos3.tituloGenero, this.state.generos3.quantidade);
-    // this.setState({ itemsGeneros3: [...generos] });
+    this.props.listarGeneros1(this.state.generos1.tituloGenero, this.state.generos1.quantidade);
+    this.props.listarGeneros2(this.state.generos2.tituloGenero, this.state.generos2.quantidade);
+    this.props.listarGeneros3(this.state.generos3.tituloGenero, this.state.generos3.quantidade);
     this.setState({ aguarde: false });
   }
 
@@ -89,11 +51,17 @@ class PaginaInicial extends Component {
   }
 
   render() {
-    console.log('renderizando...');
-    console.log(this.state.itemsGeneros1);
-
     var destaques = [];
     if (this.props.destaques) destaques = [...this.props.destaques];
+
+    var generos1 = [];
+    if (this.props.generos1) generos1 = [...this.props.generos1];
+
+    var generos2 = [];
+    if (this.props.generos2) generos2 = [...this.props.generos2];
+
+    var generos3 = [];
+    if (this.props.generos3) generos3 = [...this.props.generos3];
 
     if (this.state.aguarde) {
       return <ModalCarregando isOpen={this.state.aguarde} />
@@ -102,15 +70,19 @@ class PaginaInicial extends Component {
     return (
       <>
         <MainCarroussel items={destaques} />
-        <CarrouselGenre tituloGenero={this.state.generos1.tituloGenero} items={this.state.itemsGeneros1} />
+        <CarrouselGenre tituloGenero={this.state.generos1.tituloGenero} items={generos1} />
+        <CarrouselGenre tituloGenero={this.state.generos2.tituloGenero} items={generos2} />
+        <CarrouselGenre tituloGenero={this.state.generos3.tituloGenero} items={generos3} />
       </>
     );
   }
 }
 
 const mapStateToProps = state => ({
-  destaques: state.filme.destaques,
-  generos: state.filme.generos
+  destaques: state.curta.destaques,
+  generos1: state.curta.generos1,
+  generos2: state.curta.generos2,
+  generos3: state.curta.generos3
 });
 
-export default connect(mapStateToProps, actionsFilmes)(PaginaInicial);
+export default connect(mapStateToProps, actionsCurta)(PaginaInicial);
