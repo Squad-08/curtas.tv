@@ -20,7 +20,7 @@ $ npm start
 ## 🚀 Como o projeto foi iniciado
 
 Este projeto é divido em duas partes:
-1. Backend ? 
+1. Backend (curtas.tv-backend) 
 2. Frontend (curtas.tv) 
 
 💡Esta aplicação precisa que o Backend esteja sendo executado para funcionar.
@@ -37,9 +37,9 @@ Antes de começar, você vai precisar ter instalado em sua máquina as seguintes
 $ npm install
 
 # Execute a API
-$ npm start
+$ npm run dev
 
-# O servidor inciará na porta:8080 - acesse http://localhost:8080 
+# O servidor inciará na porta:3333 - acesse http://localhost:3333 
 
 ```
 #### 🎲 Criando a aplicação web (Frontend)
@@ -77,7 +77,6 @@ $ npm start
 
 ## 👨‍💻 Equipe de Desenvolvimento
 
-* **Anderson Amicuchi** - [Anderson Amicuchi](https://www.linkedin.com/in/amicuchi/)
 * **Geverson Souza** - [Geverson Souza](https://www.linkedin.com/in/geverson-souza-033aa193/)
 * **Giselle Piasetzki** - [Giselle Piasetzki]( https://www.linkedin.com/in/giselle-carolina-piasetzki-ba216a134/)
 * **Matheus Leonardo** - [Matheus Leonardo](https://linkedin.com.br/)
