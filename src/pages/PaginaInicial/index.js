@@ -4,6 +4,7 @@ import MainCarroussel from "../../components/MainCarroussel";
 import { connect } from "react-redux";
 import * as actionsCurta from "../../core/actions/actionsCurta";
 import ModalCarregando from '../../components/ModalCarregando';
+import { Redirect } from "react-router";
 
 class PaginaInicial extends Component {
 
@@ -65,6 +66,10 @@ class PaginaInicial extends Component {
 
     if (this.state.aguarde) {
       return <ModalCarregando isOpen={this.state.aguarde} />
+    }
+
+    if (destaques.length === 0 && generos1.length === 0 && generos2.length === 0 && generos3.length === 0) {
+      return (<Redirect to="/pagina-inexistente" />);
     }
 
     return (
