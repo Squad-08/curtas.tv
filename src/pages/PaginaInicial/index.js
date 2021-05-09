@@ -24,11 +24,16 @@ class PaginaInicial extends Component {
       tituloGenero: "Ficção Científica",
       quantidade: 5,
     },
-    aguarde: false
+    erro: false
   }
 
   listarDestaques() {
-    this.props.listarDestaques();
+    this.props.listarDestaques(3, (erro) => {
+      if (erro.status) {
+        console.log(erro);
+        this.setState({ erro: true });
+      }
+    });
   }
 
   listarGeneros() {
@@ -77,7 +82,8 @@ class PaginaInicial extends Component {
   render() {
     return (
       <>
-      {this.props.destaques && this.props.generos1 && this.props.generos2 && this.props.generos3 ? this.renderizaConteudo() : <Carregando isOpen={true} pagina="Curtas.Tv"/>}
+        {this.state.erro ? <Redirect to='/pagina-inexistente' /> : ""}
+        {this.props.destaques && this.props.generos1 && this.props.generos2 && this.props.generos3 ? this.renderizaConteudo() : <Carregando isOpen={true} pagina="Curtas.Tv" />}
       </>
     )
   }
