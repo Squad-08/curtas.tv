@@ -90,7 +90,7 @@
     border-right: 0px;
   }
   .embed-iframe {
-    width: calc(100%-2px);
+    width: calc(100% - 2px);
     height: 250px;
   }
 }
