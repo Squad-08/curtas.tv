@@ -13,7 +13,7 @@ import Principal from "../containers/Principal";
 import Curta from "../../pages/Curta";
 import PaginaInicial from "../../pages/PaginaInicial";
 import PaginaInexistente from "../../pages/PaginaInexistente";
-import SobreNos from "../../pages/SobreNos";
+import SobreNos from "../../pages/FeitoPor";
 
 const Routes = () => {
   return (
