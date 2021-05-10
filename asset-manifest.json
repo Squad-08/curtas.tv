@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/curtas.tv/static/css/main.0c8b7962.chunk.css",
+    "main.css": "/curtas.tv/static/css/main.1e624f35.chunk.css",
     "main.js": "/curtas.tv/static/js/main.a825c9c4.chunk.js",
     "main.js.map": "/curtas.tv/static/js/main.a825c9c4.chunk.js.map",
     "runtime-main.js": "/curtas.tv/static/js/runtime-main.702d3e97.js",
@@ -10,14 +10,14 @@
     "static/js/2.9ac4abed.chunk.js.map": "/curtas.tv/static/js/2.9ac4abed.chunk.js.map",
     "index.html": "/curtas.tv/index.html",
     "static/css/2.4c97ca4f.chunk.css.map": "/curtas.tv/static/css/2.4c97ca4f.chunk.css.map",
-    "static/css/main.0c8b7962.chunk.css.map": "/curtas.tv/static/css/main.0c8b7962.chunk.css.map",
+    "static/css/main.1e624f35.chunk.css.map": "/curtas.tv/static/css/main.1e624f35.chunk.css.map",
     "static/js/2.9ac4abed.chunk.js.LICENSE.txt": "/curtas.tv/static/js/2.9ac4abed.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.702d3e97.js",
     "static/css/2.4c97ca4f.chunk.css",
     "static/js/2.9ac4abed.chunk.js",
-    "static/css/main.0c8b7962.chunk.css",
+    "static/css/main.1e624f35.chunk.css",
     "static/js/main.a825c9c4.chunk.js"
   ]
 }
