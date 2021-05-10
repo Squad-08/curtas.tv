@@ -5,7 +5,7 @@ import ContentSegundaTela from '../../components/ContentSegundaTela';
 import Carregando from '../../components/Carregando';
 import { Redirect } from 'react-router';
 
-class Filme extends Component {
+class Curta extends Component {
 
     state = {
         aguarde: true,
@@ -54,7 +54,6 @@ class Filme extends Component {
 
 
     render() {
-        console.log(this.state.erro);
         return (
             <>
                 {this.state.erro ? <Redirect to='/pagina-inexistente' /> : ""}
@@ -68,4 +67,4 @@ const mapStateToProps = state => ({
     curta: state.curta.curta
 });
 
-export default connect(mapStateToProps, actionsCurta)(Filme);
+export default connect(mapStateToProps, actionsCurta)(Curta);
