@@ -7,8 +7,6 @@ export const buscarCurta = (id) => {
     return (dispatch) => {
         axios.get(`${api}/movie/${id}`)
             .then((response) => {
-                console.log('Conectado na API');
-                console.log(response.data);
                 dispatch({ type: BUSCAR_CURTA, payload: response.data });
             }).catch((err) => erros(err));
     }
