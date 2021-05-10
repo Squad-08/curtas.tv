@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/curtas.tv/static/css/main.0c8b7962.chunk.css",
-    "main.js": "/curtas.tv/static/js/main.508f73e8.chunk.js",
-    "main.js.map": "/curtas.tv/static/js/main.508f73e8.chunk.js.map",
+    "main.js": "/curtas.tv/static/js/main.0221ec67.chunk.js",
+    "main.js.map": "/curtas.tv/static/js/main.0221ec67.chunk.js.map",
     "runtime-main.js": "/curtas.tv/static/js/runtime-main.702d3e97.js",
     "runtime-main.js.map": "/curtas.tv/static/js/runtime-main.702d3e97.js.map",
     "static/css/2.4c97ca4f.chunk.css": "/curtas.tv/static/css/2.4c97ca4f.chunk.css",
@@ -18,6 +18,6 @@
     "static/css/2.4c97ca4f.chunk.css",
     "static/js/2.9ac4abed.chunk.js",
     "static/css/main.0c8b7962.chunk.css",
-    "static/js/main.508f73e8.chunk.js"
+    "static/js/main.0221ec67.chunk.js"
   ]
 }
