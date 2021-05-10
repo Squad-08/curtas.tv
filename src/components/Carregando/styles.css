@@ -1,6 +1,6 @@
 .carregamento{
     position: absolute;
-    background-color: rgba(0,0,0,0.6);
+    background-color: var(--color-second);
     border-radius: 10px;
 }
 .conteudo {
