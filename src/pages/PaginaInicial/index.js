@@ -11,17 +11,17 @@ class PaginaInicial extends Component {
     //Primeiro gennero
     generos1: {
       tituloGenero: "Drama",
-      quantidade: 3,
+      quantidade: 7,
     },
     //Segundo gennero
     generos2: {
       tituloGenero: "Fantasia",
-      quantidade: 4,
+      quantidade: 7,
     },
     //Terceiro gennero
     generos3: {
       tituloGenero: "Ficção Científica",
-      quantidade: 5,
+      quantidade: 7,
     },
     aguarde: false
   }
