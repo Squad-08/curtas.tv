@@ -5,7 +5,7 @@ import ContentSegundaTela from '../../components/ContentSegundaTela';
 import Carregando from '../../components/Carregando';
 import { Redirect } from 'react-router';
 
-class Filme extends Component {
+class Curta extends Component {
 
     state = {
         aguarde: true,
@@ -68,4 +68,4 @@ const mapStateToProps = state => ({
     curta: state.curta.curta
 });
 
-export default connect(mapStateToProps, actionsCurta)(Filme);
+export default connect(mapStateToProps, actionsCurta)(Curta);

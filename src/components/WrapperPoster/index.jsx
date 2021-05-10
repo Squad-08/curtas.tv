@@ -5,7 +5,7 @@ import './styles.css'
 const WrapperPoster = (props) => {
     return (
         <>
-            <Link to={`/filme/${props.id}`}>
+            <Link to={`/curta/${props.id}`}>
                 <figure className="wrapper-poster">
                     <img src={props.src} alt={props.alt} className="short-poster" />
                     <figcaption className="short-title">{props.title}</figcaption>
