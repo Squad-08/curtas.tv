@@ -54,7 +54,6 @@ class Curta extends Component {
 
 
     render() {
-        console.log(this.state.erro);
         return (
             <>
                 {this.state.erro ? <Redirect to='/pagina-inexistente' /> : ""}
