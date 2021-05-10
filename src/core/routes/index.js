@@ -7,6 +7,7 @@ import Principal from '../containers/Principal';
 import Filme from '../../pages/Filme';
 import PaginaInicial from '../../pages/PaginaInicial';
 import PaginaInexistente from '../../pages/PaginaInexistente';
+import SobreNos from '../../pages/SobreNos';
 
 const Routes = () => {
     return (
@@ -17,6 +18,7 @@ const Routes = () => {
                         <Route path="/" exact component={Principal(PaginaInicial)} />
                         <Route path="/filme/:id" component={Principal(Filme)} />
                         <Route path='/pagina-inexistente' component={Principal(PaginaInexistente)} />
+                        <Route path='/sobre-nos' component={Principal(SobreNos)} />
                         <Redirect from='*' to='/pagina-inexistente' />
                     </Switch>
                 </BrowserRouter>

@@ -2,18 +2,22 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as actionsCurta from '../../core/actions/actionsCurta';
 import ContentSegundaTela from '../../components/ContentSegundaTela';
-import ModalCarregando from '../../components/ModalCarregando';
+import Carregando from '../../components/Carregando';
+import { Redirect } from 'react-router';
 
 class Filme extends Component {
 
     state = {
-        aguarde: true
+        aguarde: true,
+        erro: false
     }
 
     buscarCurta() {
         const { id } = this.props.match.params;
         this.setState({ aguarde: true });
-        this.props.buscarCurta(id);
+        this.props.buscarCurta(id, (erro) => {
+            this.setState({ erro: true });
+        });
         this.setState({ aguarde: false });
     }
 
@@ -27,14 +31,16 @@ class Filme extends Component {
 
     componentWillUnmount() {
         this.props.limparCurta();
+        this.props.limparDestaques();
+        this.props.limparGeneros();
     }
 
-    render() {
+    renderizaConteudo() {
         var curta = [];
         if (this.props.curta) curta = { ...this.props.curta };
         return (
             <>
-                <ModalCarregando isOpen={this.state.aguarde} />
+                <Carregando isOpen={this.state.aguarde} />
                 <ContentSegundaTela
                     alt={curta.id}
                     title={curta.title}
@@ -42,6 +48,17 @@ class Filme extends Component {
                     posterUrl={curta.posterUrl}
                     videoUrl={curta.videoUrl}
                     popularity={curta.popularity} />
+            </>
+        );
+    }
+
+
+    render() {
+        console.log(this.state.erro);
+        return (
+            <>
+                {this.state.erro ? <Redirect to='/pagina-inexistente' /> : ""}
+                {this.props.curta ? this.renderizaConteudo() : <Carregando isOpen={true} pagina="Curta" />}
             </>
         );
     }

@@ -1,4 +1,4 @@
-import { BUSCAR_CURTA, DESTAQUES, GENEROS1, GENEROS2, GENEROS3, LIMPAR_CURTA } from '../actions/types';
+import { BUSCAR_CURTA, DESTAQUES, GENEROS1, GENEROS2, GENEROS3, LIMPAR_CURTA, LIMPAR_DESTAQUES, LIMPAR_GENEROS } from '../actions/types';
 
 const reducersCurta = (state = {}, action) => {
     switch (action.type) {
@@ -28,6 +28,16 @@ const reducersCurta = (state = {}, action) => {
                 generos3: action.payload,
             }
         case LIMPAR_CURTA:
+            return {
+                ...state,
+                curta: null,
+            }
+        case LIMPAR_DESTAQUES:
+            return {
+                ...state,
+                curta: null,
+            }
+        case LIMPAR_GENEROS:
             return {
                 ...state,
                 curta: null,
