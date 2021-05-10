@@ -23,5 +23,6 @@
   .genre-title {
     width: 100%;
     font-size: 20px;
+    border-radius: 0px;
   }
 }
