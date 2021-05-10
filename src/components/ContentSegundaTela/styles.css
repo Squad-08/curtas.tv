@@ -25,6 +25,8 @@
   text-align: center;
   padding: 9px 0px;
   line-height: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px var(--color-second);
 }
 
 .short-data .short-sinopse {
@@ -37,6 +39,8 @@
   border: 1px solid var(--color-first);
   line-height: 30px;
   padding: 52px 28px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 8px var(--color-second);
 }
 
 @media (max-width: 1135px) {
