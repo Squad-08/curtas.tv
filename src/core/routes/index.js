@@ -13,7 +13,7 @@ import Principal from "../containers/Principal";
 import Curta from "../../pages/Curta";
 import PaginaInicial from "../../pages/PaginaInicial";
 import PaginaInexistente from "../../pages/PaginaInexistente";
-import SobreNos from "../../pages/FeitoPor";
+import FeitoPor from "../../pages/FeitoPor";
 
 const Routes = () => {
   return (
@@ -31,7 +31,7 @@ const Routes = () => {
               path="/pagina-inexistente"
               component={Principal(PaginaInexistente)}
             />
-            <Route path="/sobre-nos" component={Principal(SobreNos)} />
+            <Route path="/sobre-nos" component={Principal(FeitoPor)} />
             <Redirect from="*" to="/pagina-inexistente" />
           </Switch>
         </BrowserRouter>
