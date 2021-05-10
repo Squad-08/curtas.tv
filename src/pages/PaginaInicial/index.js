@@ -2,38 +2,26 @@ import React, { Component } from "react";
 import CarrouselGenre from "../../components/CarrouselGenre";
 import MainCarroussel from "../../components/MainCarroussel";
 import { connect } from "react-redux";
-import * as actionsFilmes from "../../core/actions/actionsFilme";
+import * as actionsCurta from "../../core/actions/actionsCurta";
 import ModalCarregando from '../../components/ModalCarregando';
 
 class PaginaInicial extends Component {
 
   state = {
-    testeDestaques: [
-      {
-        id: "263fc922-b665-4bbf-9f26-0250d65c24ef",
-        title: "Lost & Found",
-        thumbnailUrl: "https://m.media-amazon.com/images/M/MV5BMzAxMzVmNWYtNzc4Yi00YWUxLTlkYWUtYWEyYzQ1YWFjYmVjXkEyXkFqcGdeQXVyNTkxMDU1Njg@._V1_.jpg"
-      },
-      {
-        id: "6758c8f8-6d77-479e-a8f0-d99925059c8a",
-        title: "Kitbull",
-        thumbnailUrl: "https://m.media-amazon.com/images/M/MV5BNTQ1NTc3NjctNDA0ZC00NzcyLTljY2YtYjZmYzE3YTY4NTA0XkEyXkFqcGdeQXVyNjgwNDU3NTA@._V1_FMjpg_UX1000_.jpg"
-      },
-      {
-        id: "7d8834e0-e6d5-41b2-a222-c3895d7e2764",
-        title: "Chateau de Sable (Sand Castle)",
-        thumbnailUrl: "https://m.media-amazon.com/images/M/MV5BZjdiYjAwMTAtODg4ZS00NmM1LWJjYjMtODAxODhkZThjYmZkXkEyXkFqcGdeQXVyNTk3NTY4NjI@._V1_FMjpg_UX1000_.jpg"
-      }
-    ],
-    generos: {
+    //Primeiro gennero
+    generos1: {
       tituloGenero: "Drama",
-      itemsGeneros: [
-        {
-          id: "263fc922-b665-4bbf-9f26-0250d65c24ef",
-          title: "Sweet Tooth",
-          posterUrl: "https://m.media-amazon.com/images/M/MV5BZDMxNjhiZmYtY2YyMC00NWFkLWI0ZWEtYmJkZThhMjlhYWE1XkEyXkFqcGdeQXVyMjUxMTY3ODM@._V1_UY268_CR43,0,182,268_AL_.jpg",
-        }
-      ]
+      quantidade: 7,
+    },
+    //Segundo gennero
+    generos2: {
+      tituloGenero: "Fantasia",
+      quantidade: 7,
+    },
+    //Terceiro gennero
+    generos3: {
+      tituloGenero: "Ficção Científica",
+      quantidade: 7,
     },
     aguarde: false
   }
@@ -44,48 +32,57 @@ class PaginaInicial extends Component {
     this.setState({ aguarde: false });
   }
 
-  listarGeneros(genero, quantidade) {
+  listarGeneros() {
     this.setState({ aguarde: true });
-    this.props.listarGeneros(genero, quantidade);
+    this.props.listarGeneros1(this.state.generos1.tituloGenero, this.state.generos1.quantidade);
+    this.props.listarGeneros2(this.state.generos2.tituloGenero, this.state.generos2.quantidade);
+    this.props.listarGeneros3(this.state.generos3.tituloGenero, this.state.generos3.quantidade);
     this.setState({ aguarde: false });
   }
 
   componentDidMount() {
     this.listarDestaques();
-    this.listarGeneros(this.state.generos.tituloGenero, 3);
+    this.listarGeneros();
   }
 
   componentDidUpdate(nextProps) {
     (!this.props.destaques && nextProps.destaques) && this.listarDestaques();
-    (!this.props.generos && nextProps.generos) && this.listarGeneros(this.state.generos.tituloGenero, 3);
+    (!this.props.generos && nextProps.generos) && this.listarGeneros();
   }
 
   render() {
-    console.log('renderizando..s.');
-    
     var destaques = [];
     if (this.props.destaques) destaques = [...this.props.destaques];
-    
-    var itensGenero1 = [];
-    if (this.props.generos) itensGenero1 = [...this.props.generos];
-    console.log(itensGenero1);
+
+    var generos1 = [];
+    if (this.props.generos1) generos1 = [...this.props.generos1];
+
+    var generos2 = [];
+    if (this.props.generos2) generos2 = [...this.props.generos2];
+
+    var generos3 = [];
+    if (this.props.generos3) generos3 = [...this.props.generos3];
 
     if (this.state.aguarde) {
-      return <ModalCarregando isOpen={itensGenero1} />
+      return <ModalCarregando isOpen={this.state.aguarde} />
     }
 
     return (
       <>
         <MainCarroussel items={destaques} />
-        <CarrouselGenre tituloGenero={this.state.generos.tituloGenero} items={itensGenero1} />
+        <CarrouselGenre tituloGenero={this.state.generos1.tituloGenero} items={generos1} />
+        <CarrouselGenre tituloGenero={this.state.generos2.tituloGenero} items={generos2} />
+        <CarrouselGenre tituloGenero={this.state.generos3.tituloGenero} items={generos3} />
       </>
     );
   }
 }
 
 const mapStateToProps = state => ({
-  destaques: state.filme.destaques,
-  generos: state.filme.generos
+  destaques: state.curta.destaques,
+  generos1: state.curta.generos1,
+  generos2: state.curta.generos2,
+  generos3: state.curta.generos3
 });
 
-export default connect(mapStateToProps, actionsFilmes)(PaginaInicial);
+export default connect(mapStateToProps, actionsCurta)(PaginaInicial);

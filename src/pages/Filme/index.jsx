@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import * as asctionsFilme from '../../core/actions/actionsFilme';
+import * as actionsCurta from '../../core/actions/actionsCurta';
 import ContentSegundaTela from '../../components/ContentSegundaTela';
 import ModalCarregando from '../../components/ModalCarregando';
 
@@ -64,4 +64,4 @@ const mapStateToProps = state => ({
     curta: state.curta
 });
 
-export default connect(mapStateToProps, asctionsFilme)(Filme);
+export default connect(mapStateToProps, actionsCurta)(Filme);

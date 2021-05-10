@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { api } from '../config/api';
-import { DESTAQUES, GENEROS, BUSCAR_CURTA,LIMPAR_CURTA } from './types';
+import { DESTAQUES, GENEROS1, GENEROS2, GENEROS3, BUSCAR_CURTA, LIMPAR_CURTA } from './types';
 import erros from './erroHandler';
 
 export const buscarCurta = (id) => {
@@ -23,15 +23,32 @@ export const listarDestaques = (quantidade) => {
     }
 }
 
-export const listarGeneros = (genero, quantidade) => {
+export const listarGeneros1 = (genero, quantidade) => {
     return (dispatch) => {
         axios.get(`${api}/movies/${genero}?limitOf=${quantidade ? quantidade : 6}`)
             .then((response) => {
-                dispatch({ type: GENEROS, payload: response.data });
+                dispatch({ type: GENEROS1, payload: response.data });
             }).catch((err) => erros(err));
     }
 }
 
+export const listarGeneros2 = (genero, quantidade) => {
+    return (dispatch) => {
+        axios.get(`${api}/movies/${genero}?limitOf=${quantidade ? quantidade : 6}`)
+            .then((response) => {
+                dispatch({ type: GENEROS2, payload: response.data });
+            }).catch((err) => erros(err));
+    }
+}
+
+export const listarGeneros3 = (genero, quantidade) => {
+    return (dispatch) => {
+        axios.get(`${api}/movies/${genero}?limitOf=${quantidade ? quantidade : 6}`)
+            .then((response) => {
+                dispatch({ type: GENEROS3, payload: response.data });
+            }).catch((err) => erros(err));
+    }
+}
 
 export const limparCurta = () => {
     return (dispatch) => {
