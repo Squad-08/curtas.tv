@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 const WrapperThumbnail = (props) => {
     return (
-        <Link to={`/curta/${props.id}`}>
+        <Link to={`/curtas.tv/${props.id}`}>
             <div className="wrapper-thumbnail">
                 <ShortThumbnailCarroussel src={props.src} alt={props.alt} key={props.key} />
                 <ShortTitleCarroussel titleCarrossel={props.titleCarrossel} key={props.key}/>
