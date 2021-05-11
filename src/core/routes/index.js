@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  BrowserRouter,
-  Switch,
-  Route,
-  Router,
-  Redirect,
-} from "react-router-dom";
+import { BrowserRouter, Switch, Route, Router } from "react-router-dom";
 import { Provider } from "react-redux";
 import store from "../store";
 import { history } from "../routes/history";
@@ -26,13 +20,9 @@ const Routes = () => {
               exact
               component={Principal(PaginaInicial)}
             />
-            <Route path="/curta/:id" component={Principal(Curta)} />
-            <Route
-              path="/pagina-inexistente"
-              component={Principal(PaginaInexistente)}
-            />
-            <Route path="/sobre-nos" component={Principal(FeitoPor)} />
-            <Redirect from="*" to="/pagina-inexistente" />
+            <Route path="/curtas.tv/:id" component={Principal(Curta)} />
+            <Route path="/feito-por" component={Principal(FeitoPor)} />
+            <Route path="*" component={Principal(PaginaInexistente)} />
           </Switch>
         </BrowserRouter>
       </Router>
