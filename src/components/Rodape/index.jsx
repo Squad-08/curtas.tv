@@ -12,7 +12,7 @@ const Rodape = () => {
                 Geverson Souza
                 Giselle Piasetzki
                 Matheus Leonardo
-                WagnerCarestini
+                Wagner Carestini
             </h3>
         </footer>
     );
