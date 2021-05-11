@@ -2,29 +2,97 @@ import React, { Component } from "react";
 import CarrouselGenre from "../../components/CarrouselGenre";
 import MainCarroussel from "../../components/MainCarroussel";
 import { connect } from "react-redux";
-import * as actionsFilmes from "../../core/actions/actionsFilme";
+import * as actionsCurta from "../../core/actions/actionsCurta";
+import Carregando from '../../components/Carregando';
+import { Redirect } from "react-router";
 
 class PaginaInicial extends Component {
-  listarFilmes() {
-    //this.props.listarFilmes();
-    this.props.testeAPI(
-      { email: "geverson@gmail.com", senha: "zxc123asd" },
-      (err) => {}
-    );
+
+  state = {
+    //Primeiro gennero
+    generos1: {
+      tituloGenero: "Drama",
+      quantidade: 7,
+    },
+    //Segundo gennero
+    generos2: {
+      tituloGenero: "Fantasia",
+      quantidade: 7,
+    },
+    //Terceiro gennero
+    generos3: {
+      tituloGenero: "Ficção Científica",
+      quantidade: 7,
+    },
+    erro: false
+  }
+
+  listarDestaques() {
+    this.props.listarDestaques(3, (erro) => {
+      if (erro.status) {
+        this.setState({ erro: true });
+      }
+    });
+  }
+
+  listarGeneros() {
+    this.props.listarGeneros1(this.state.generos1.tituloGenero, this.state.generos1.quantidade);
+    this.props.listarGeneros2(this.state.generos2.tituloGenero, this.state.generos2.quantidade);
+    this.props.listarGeneros3(this.state.generos3.tituloGenero, this.state.generos3.quantidade);
   }
 
   componentDidMount() {
-    this.listarFilmes();
+    this.listarDestaques();
+    this.listarGeneros();
+  }
+
+  componentDidUpdate(nextProps) {
+    (!this.props.destaques && nextProps.destaques) && this.listarDestaques();
+    ((!this.props.generos1 && nextProps.generos1) || (!this.props.generos2 && nextProps.generos2)) || (!this.props.generos3 && nextProps.generos3) && this.listarGeneros();
+  }
+
+  componentWillUnmount() {
+    this.props.limparDestaques();
+    this.props.limparGeneros();
+  }
+  renderizaConteudo() {
+    var destaques = [];
+    if (this.props.destaques) destaques = [...this.props.destaques];
+
+    var generos1 = [];
+    if (this.props.generos1) generos1 = [...this.props.generos1];
+
+    var generos2 = [];
+    if (this.props.generos2) generos2 = [...this.props.generos2];
+
+    var generos3 = [];
+    if (this.props.generos3) generos3 = [...this.props.generos3];
+
+    return (
+      <>
+        <MainCarroussel items={destaques} />
+        <CarrouselGenre tituloGenero={this.state.generos1.tituloGenero} items={generos1} />
+        <CarrouselGenre tituloGenero={this.state.generos2.tituloGenero} items={generos2} />
+        <CarrouselGenre tituloGenero={this.state.generos3.tituloGenero} items={generos3} />
+      </>
+    )
   }
 
   render() {
     return (
       <>
-        <MainCarroussel />
-        <CarrouselGenre />
+        {this.state.erro ? <Redirect to='/pagina-inexistente' /> : ""}
+        {this.props.destaques && this.props.generos1 && this.props.generos2 && this.props.generos3 ? this.renderizaConteudo() : <Carregando isOpen={true} pagina="Curtas.Tv" />}
       </>
-    );
+    )
   }
 }
 
-export default connect(null, actionsFilmes)(PaginaInicial);
+const mapStateToProps = state => ({
+  destaques: state.curta.destaques,
+  generos1: state.curta.generos1,
+  generos2: state.curta.generos2,
+  generos3: state.curta.generos3
+});
+
+export default connect(mapStateToProps, actionsCurta)(PaginaInicial);

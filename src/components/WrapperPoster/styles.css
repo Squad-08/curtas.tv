@@ -9,6 +9,9 @@
 
 .wrapper-poster .short-poster {
   border: 1px solid var(--color-first);
+  width: 182px;
+  height: 268px;
+  box-shadow: 0px 0px 10px var(--color-second);
 }
 
 .wrapper-poster .short-title {
@@ -17,4 +20,12 @@
   height: 60px;
   font-size: 24px;
   text-align: center;
+  padding-top: 3px;
+}
+
+@media (max-width: 460px) {
+  .wrapper-poster .short-title {
+    font-size: 20px;
+    padding-top: 5px;
+  }
 }

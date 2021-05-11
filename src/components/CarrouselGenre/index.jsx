@@ -6,16 +6,29 @@ import ButtonArrowLeft from '../ButtonArrowLeft';
 import ButtonArrowRight from '../ButtonArrowRight';
 import GenreTitle from '../GenreTitle';
 
-const CarrouselGenre = () => {
+const CarrouselGenre = (props) => {
+
+    const items = [...props.items];
+
+    const generos = items.map((item) => {
+        return (
+            <WrapperPoster id={item.id} src={item.posterUrl} alt={item.id} title={item.title} />
+        );
+    });
+
     return (
-            <section className="short-genre">
-                <GenreTitle />
-                <div className="carroussel-genre">
-                    <ButtonArrowLeft />
-                    <WrapperPoster />
-                    <ButtonArrowRight />
+        <section className="short-genre">
+            <GenreTitle tituloGenero={props.tituloGenero} />
+            <div className="carroussel-genre">
+                <ButtonArrowLeft />
+                <div className="carroussel-items">
+                    <div className="carroussel-elements">
+                        {generos}
+                    </div>
                 </div>
-            </section>
+                <ButtonArrowRight />
+            </div>
+        </section>
     );
 }
 

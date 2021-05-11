@@ -9,9 +9,20 @@
   margin: 0px;
   line-height: 30px;
   padding: 9px 0px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 0px 0px 5px var(--color-second);
 }
 
 .background-genre-title {
   display: block;
   width: 100%;
+}
+
+@media (max-width: 460px) {
+  .genre-title {
+    width: 100%;
+    font-size: 20px;
+    border-radius: 0px;
+  }
 }

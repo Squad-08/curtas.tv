@@ -5,23 +5,13 @@ import {
   CarouselControl,
   CarouselIndicators,
 } from 'reactstrap';
-import './styles.css'
-import image from "./img/shortThumbnail1.png"
-import WrapperThumbnail from '../WrapperThumbnail'
+import './styles.css';
+import WrapperThumbnail from '../WrapperThumbnail';
 
-const items = [
-  {
-    src: image,
-  },
-  {
-    src: image,
-  },
-  {
-    src: image,
-  }
-];
 
 const MainCarroussel = (props) => {
+  const items = [...props.items];
+
   const [activeIndex, setActiveIndex] = useState(0);
   const [animating, setAnimating] = useState(false);
 
@@ -47,10 +37,9 @@ const MainCarroussel = (props) => {
       <CarouselItem
         onExiting={() => setAnimating(true)}
         onExited={() => setAnimating(false)}
-        key={item.src}
-      >
+        key={item.id}>
         <div className="carroussel-position">
-          <WrapperThumbnail />
+          <WrapperThumbnail src={item.thumbnailUrl} alt={item.id} titleCarrossel={item.title} id={item.id}/>
         </div>
       </CarouselItem>
     );
@@ -58,16 +47,16 @@ const MainCarroussel = (props) => {
 
   return (
     <Carousel
-    activeIndex={activeIndex}
-    next={next}
-    previous={previous}
+      activeIndex={activeIndex}
+      next={next}
+      previous={previous}
     >
-        <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={goToIndex} />
-        {slides}
-        <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />
-        <CarouselControl direction="next" directionText="Next" onClickHandler={next}/>
+      <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={goToIndex} />
+      {slides}
+      <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />
+      <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
     </Carousel>
-    )
+  )
 }
 
 export default MainCarroussel;

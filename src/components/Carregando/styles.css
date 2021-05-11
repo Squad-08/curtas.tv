@@ -1,0 +1,14 @@
+.carregamento{
+    position: absolute;
+    background-color: var(--color-second);
+    border-radius: 10px;
+}
+.conteudo {
+    padding: 15%;                        
+    align-items: center;
+}
+.subconteudo {
+    margin: 5px auto;
+    display:flex;
+    justify-content: center;
+  }

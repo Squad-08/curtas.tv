@@ -1,0 +1,108 @@
+.short-data {
+  display: flex;
+  justify-content: space-around;
+}
+
+.wrapper-data {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.short-data .short-poster {
+  width: 372px;
+  height: 551px;
+  border: 5px solid var(--color-first);
+  box-shadow: 0px 0px 8px var(--color-second);
+}
+
+.short-data .short-title {
+  width: 440px;
+  height: 48px;
+  background-color: var(--color-first);
+  color: var(--color-third);
+  font-size: 24px;
+  text-align: center;
+  padding: 9px 0px;
+  line-height: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px var(--color-second);
+}
+
+.short-data .short-sinopse {
+  margin-top: 30px;
+  display: inline-block;
+  width: 720px;
+  background-color: var(--color-black-second);
+  color: var(--color-third);
+  font-size: 24px;
+  border: 1px solid var(--color-first);
+  line-height: 30px;
+  padding: 52px 28px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 8px var(--color-second);
+}
+
+@media (max-width: 1135px) {
+  .short-data .short-poster {
+    width: 273px;
+    height: 402px;
+  }
+  .short-data .short-title {
+    width: 330px;
+    height: 36px;
+    font-size: 18px;
+    line-height: 22.5px;
+  }
+  .short-data .short-sinopse {
+    margin-top: 30px;
+    width: 600px;
+    font-size: 18px;
+    line-height: 22.5px;
+    padding: 52px 28px;
+  }
+}
+
+@media (max-width: 910px) {
+  .short-data .short-poster {
+    width: 186px;
+    height: 268px;
+  }
+  .short-data .short-title {
+    width: 220px;
+    height: 24px;
+    font-size: 12px;
+    line-height: 15px;
+    padding: 4.5px 0px;
+  }
+  .short-data .short-sinopse {
+    margin-top: 30px;
+    width: 480px;
+    font-size: 12px;
+    line-height: 15px;
+    padding: 52px 28px;
+  }
+}
+
+@media (max-width: 700px) {
+  .short-data {
+    flex-flow: column;
+    align-items: center;
+  }
+  .wrapper-data {
+    margin-top: 30px;
+  }
+  .short-data .short-sinopse {
+    margin-top: 15px;
+    width: 450px;
+    padding: 26px 14px;
+  }
+}
+
+@media (max-width: 460px) {
+  .short-data .short-sinopse {
+    margin-top: 15px;
+    width: 320px;
+  }
+} ;

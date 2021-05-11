@@ -1,0 +1,37 @@
+.main-footer {
+  display: flex;
+  background-color: var(--color-black-second);
+  width: 100%;
+  height: 150px;
+  margin-top: 60px;
+  justify-content: space-between;
+  padding: 0px 60px;
+  align-items: center;
+  flex-flow: row wrap;
+  position: absolute;
+  bottom: 0;
+}
+
+.main-footer .logo-fcamara {
+  width: 160px;
+  height: 35px;
+}
+
+.main-footer .made-by {
+  width: 125px;
+  height: 65px;
+  text-align: right;
+  font-size: 10px;
+  line-height: 12.5px;
+  color: var(--color-third);
+}
+
+@media (max-width: 460px) {
+  .main-footer {
+    flex-flow: column wrap;
+    justify-content: space-around;
+  }
+  .main-footer .made-by {
+    text-align: center;
+  }
+}

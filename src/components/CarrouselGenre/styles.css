@@ -1,14 +1,25 @@
-.carroussel-genre {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-  align-items: center;
-}
-
 .short-genre {
   margin-bottom: 40px;
 }
 
 .short-genre:first-of-type {
   margin-top: 80px;
+}
+
+.carroussel-genre {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.carroussel-items {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  overflow-x: scroll;
+}
+
+.carroussel-elements {
+  display: flex;
+  padding: 0px 0px 25px;
 }

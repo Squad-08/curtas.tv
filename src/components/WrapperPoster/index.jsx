@@ -1,13 +1,18 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './styles.css'
 
-const WrapperPoster = () => {
+const WrapperPoster = (props) => {
     return (
-        <figure className="wrapper-poster">
-            <img src="https://m.media-amazon.com/images/M/MV5BZDMxNjhiZmYtY2YyMC00NWFkLWI0ZWEtYmJkZThhMjlhYWE1XkEyXkFqcGdeQXVyMjUxMTY3ODM@._V1_UY268_CR43,0,182,268_AL_.jpg" alt="Poster Sweet Tooth" className="short-poster"/>
-            <figcaption className="short-title">Sweet Tooth</figcaption>
-        </figure>
-    )                
+        <>
+            <Link to={`/curta/${props.id}`}>
+                <figure className="wrapper-poster">
+                    <img src={props.src} alt={props.alt} className="short-poster" />
+                    <figcaption className="short-title">{props.title}</figcaption>
+                </figure>
+            </Link>
+        </>
+    )
 }
 
 export default WrapperPoster

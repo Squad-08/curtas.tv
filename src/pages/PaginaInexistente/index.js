@@ -1,18 +1,20 @@
-import React from 'react';
-import './styles.css';
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import * as actionsCurta from '../../core/actions/actionsCurta';
+import ContentPageNotFound from "../../components/ContentPageNotFound";
 
-const PaginaInexistente = () => {
-    return (
-        <>
-            <div className="area-principal">
-                <div className="area-destaque">
-                    <h1 className="texto">
-                        Página Inexistente
-                    </h1>
-                </div>
-            </div>
-        </>
-    );
-}
+class PaginaInexistente extends Component {
 
-export default PaginaInexistente;
+  componentWillUnmount() {
+    this.props.limparCurta();
+    this.props.limparDestaques();
+    this.props.limparGeneros();
+  }
+
+  render() {
+    return <ContentPageNotFound />;
+  }
+
+};
+
+export default connect(null, actionsCurta)(PaginaInexistente);

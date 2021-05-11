@@ -2,3 +2,15 @@
   display: flex;
   justify-content: center;
 }
+
+.carousel-indicators li {
+  background-color: var(--color-second);
+}
+
+.carousel-control-next {
+  background-color: var(--color-black-first);
+}
+
+.carousel-control-prev {
+  background-color: var(--color-black-first);
+}
